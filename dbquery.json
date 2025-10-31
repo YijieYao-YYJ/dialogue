@@ -1,0 +1,57 @@
+{
+  "result": [
+    {
+      "address": "51 Trumpington Street City Centre",
+      "area": "centre",
+      "food": "british",
+      "id": "19224",
+      "introduction": "fitzbillies restaurant serves a variety of bistro style lunches, anglo-european a la carte evening meals, as well as teas coffees and cakes throughout the day. catering for private parties is available upon request",
+      "location": [
+        52.202598,
+        0.118342
+      ],
+      "name": "fitzbillies restaurant",
+      "phone": "01223352500",
+      "postcode": "cb21rg",
+      "pricerange": "expensive",
+      "type": "restaurant",
+      "Ref": "00000045"
+    },
+    {
+      "address": "1 Kings Parade",
+      "area": "centre",
+      "food": "british",
+      "id": "6941",
+      "introduction": "",
+      "location": [
+        52.20439,
+        0.11784
+      ],
+      "name": "the cambridge chop house",
+      "phone": "01223359506",
+      "postcode": "cb21sj",
+      "pricerange": "expensive",
+      "signature": "lamb barnsley chop potato and garlic bake greens and gravy",
+      "type": "restaurant",
+      "Ref": "00000101"
+    },
+    {
+      "address": "Midsummer Common",
+      "area": "centre",
+      "food": "british",
+      "id": "508",
+      "introduction": "",
+      "location": [
+        52.21251,
+        0.12774
+      ],
+      "name": "midsummer house restaurant",
+      "phone": "01223369299",
+      "postcode": "cb41ha",
+      "pricerange": "expensive",
+      "signature": "seared scallops with truffle apple and celeriac",
+      "type": "restaurant",
+      "Ref": "00000105"
+    }
+  ]
+}

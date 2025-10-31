@@ -1,0 +1,10 @@
+{
+  "train": 8438,
+  "dev": 1000,
+  "test": 1000,
+  "files_per_split": {
+    "train": 17,
+    "dev": 2,
+    "test": 2
+  }
+}
