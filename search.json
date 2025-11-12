@@ -1,78 +1,75 @@
 {
-  "MUL2105.json": {
+  "MUL0895.json": {
     "goal": {
       "taxi": {}, 
       "police": {}, 
       "hospital": {}, 
-      "hotel": {
+      "hotel": {}, 
+      "attraction": {
         "info": {
-          "parking": "yes", 
-          "type": "guesthouse", 
-          "internet": "yes", 
+          "type": "museum", 
           "area": "centre"
         }, 
         "reqt": [
+          "phone", 
           "address"
         ], 
-        "fail_info": {
-          "parking": "yes", 
-          "type": "guesthouse", 
-          "internet": "no", 
-          "area": "east"
-        }
+        "fail_info": {}
       }, 
-      "attraction": {}, 
-      "train": {
+      "train": {}, 
+      "message": [
+        "You are traveling to Cambridge and excited about seeing local tourist attractions", 
+        "You are looking for a <span class='emphasis'>place to dine</span>. The restaurant should be in the <span class='emphasis'>moderate</span> price range and should serve <span class='emphasis'>european</span> food", 
+        "The restaurant should be in the <span class='emphasis'>centre</span>", 
+        "Once you find the <span class='emphasis'>restaurant</span> you want to book a table for <span class='emphasis'>1 people</span> at <span class='emphasis'>16:30</span> on <span class='emphasis'>sunday</span>", 
+        "If the booking fails how about <span class='emphasis'>15:30</span>", 
+        "Make sure you get the <span class='emphasis'>reference number</span>", 
+        "You are also looking for <span class='emphasis'>places to go</span> in town. The attraction should be in the type of <span class='emphasis'>museum</span> and should be <span class='emphasis'>in the same area as the restaurant</span>", 
+        "Make sure you get <span class='emphasis'>phone number</span> and <span class='emphasis'>address</span>"
+      ], 
+      "restaurant": {
         "info": {
-          "destination": "cambridge", 
-          "day": "wednesday", 
-          "arriveBy": "11:30", 
-          "departure": "ely"
+          "food": "european", 
+          "pricerange": "moderate", 
+          "area": "centre"
         }, 
         "fail_info": {}, 
         "book": {
+          "pre_invalid": true, 
+          "time": "15:30", 
+          "day": "sunday", 
           "invalid": false, 
-          "people": "8"
+          "people": "1"
         }, 
-        "fail_book": {}
-      }, 
-      "message": [
-        "You are looking for information in Cambridge", 
-        "You are looking for a <span class='emphasis'>place to stay</span>. The hotel should be in the <span class='emphasis'>east</span> and <span class='emphasis'>doesn't need to include internet</span>", 
-        "The hotel should <span class='emphasis'>include free parking</span> and should be in the type of <span class='emphasis'>guesthouse</span>", 
-        "If there is no such hotel, how about one that has <span class='emphasis'>free wifi</span>", 
-        "Make sure you get <span class='emphasis'>address</span>", 
-        "You are also looking for a <span class='emphasis'>train</span>. The train should leave on <span class='emphasis'>wednesday</span> and should <span class='emphasis'>arrive by 11:30</span>", 
-        "The train should go to <span class='emphasis'>cambridge</span> and should depart from <span class='emphasis'>ely</span>", 
-        "Once you find the train you want to make a booking for <span class='emphasis'>8 people</span>", 
-        "Make sure you get the <span class='emphasis'>reference number</span>"
-      ], 
-      "restaurant": {}
+        "fail_book": {
+          "time": "16:30"
+        }
+      }
     }, 
     "log": [
       {
-        "text": "Hi. I'm looking for a hotel in the east.  The internet is not needed.", 
+        "text": "Can you assist me with finding a moderately priced restaurant?", 
         "metadata": {}, 
         "dialog_act": {
-          "Hotel-Inform": [
+          "Restaurant-Inform": [
             [
-              "Area", 
-              "east"
+              "Price", 
+              "moderate"
             ]
           ]
         }, 
         "span_info": [
           [
-            "Hotel-Inform", 
-            "Area", 
-            "east", 
-            10, 
-            10
+            "Restaurant-Inform", 
+            "Price", 
+            "moderate", 
+            7, 
+            7
           ]
         ]
       }, 
       {
-        "text": "There are no hotels that do not have internet, but 7 which do have it. Do you have a specific price range you'd prefer?", 
+        "text": "Certainly. We have 31 moderately priced restaurants. Is there any particular cuisine you would prefer?", 
         "metadata": {
           "taxi": {
             "book": {
@@ -99,10 +96,10 @@
               "people": ""
             }, 
             "semi": {
-              "food": "", 
-              "pricerange": "", 
-              "name": "", 
-              "area": ""
+              "food": "not mentioned", 
+              "pricerange": "moderate", 
+              "name": "not mentioned", 
+              "area": "not mentioned"
             }
           }, 
           "hospital": {
@@ -121,13 +118,13 @@
               "people": ""
             }, 
             "semi": {
-              "name": "not mentioned", 
-              "area": "east", 
-              "parking": "not mentioned", 
-              "pricerange": "not mentioned", 
-              "stars": "not mentioned", 
-              "internet": "no", 
-              "type": "not mentioned"
+              "name": "", 
+              "area": "", 
+              "parking": "", 
+              "pricerange": "", 
+              "stars": "", 
+              "internet": "", 
+              "type": ""
             }
           }, 
           "attraction": {
@@ -155,319 +152,69 @@
           }
         }, 
         "dialog_act": {
-          "Hotel-Request": [
+          "Restaurant-Request": [
             [
-              "Price", 
+              "Food", 
               "?"
             ]
           ], 
-          "Hotel-Inform": [
-            [
-              "Internet", 
-              "none"
-            ], 
-            [
-              "Choice", 
-              "7"
-            ]
-          ]
-        }, 
-        "span_info": [
-          [
-            "Hotel-Inform", 
-            "Choice", 
-            "7", 
-            11, 
-            11
-          ]
-        ]
-      }, 
-      {
-        "text": "no, but it should have free parking, please.", 
-        "metadata": {}, 
-        "dialog_act": {
-          "Hotel-Inform": [
-            [
-              "Parking", 
-              "yes"
-            ], 
-            [
-              "Price", 
-              "do nt care"
-            ]
-          ]
-        }, 
-        "span_info": []
-      }, 
-      {
-        "text": "The Express by Holiday Inn Cambridge is in the area and has free parking, would you like more information?", 
-        "metadata": {
-          "taxi": {
-            "book": {
-              "booked": []
-            }, 
-            "semi": {
-              "leaveAt": "", 
-              "destination": "", 
-              "departure": "", 
-              "arriveBy": ""
-            }
-          }, 
-          "police": {
-            "book": {
-              "booked": []
-            }, 
-            "semi": {}
-          }, 
-          "restaurant": {
-            "book": {
-              "booked": [], 
-              "time": "", 
-              "day": "", 
-              "people": ""
-            }, 
-            "semi": {
-              "food": "", 
-              "pricerange": "", 
-              "name": "", 
-              "area": ""
-            }
-          }, 
-          "hospital": {
-            "book": {
-              "booked": []
-            }, 
-            "semi": {
-              "department": ""
-            }
-          }, 
-          "hotel": {
-            "book": {
-              "booked": [], 
-              "stay": "", 
-              "day": "", 
-              "people": ""
-            }, 
-            "semi": {
-              "name": "not mentioned", 
-              "area": "east", 
-              "parking": "yes", 
-              "pricerange": "dontcare", 
-              "stars": "not mentioned", 
-              "internet": "no", 
-              "type": "not mentioned"
-            }
-          }, 
-          "attraction": {
-            "book": {
-              "booked": []
-            }, 
-            "semi": {
-              "type": "", 
-              "name": "", 
-              "area": ""
-            }
-          }, 
-          "train": {
-            "book": {
-              "booked": [], 
-              "people": ""
-            }, 
-            "semi": {
-              "leaveAt": "", 
-              "destination": "", 
-              "day": "", 
-              "arriveBy": "", 
-              "departure": ""
-            }
-          }
-        }, 
-        "dialog_act": {
-          "Hotel-Inform": [
-            [
-              "Parking", 
-              "none"
-            ], 
-            [
-              "Name", 
-              "Express by Holiday Inn Cambridge"
-            ]
-          ], 
-          "general-reqmore": [
+          "general-greet": [
             [
               "none", 
               "none"
             ]
-          ]
-        }, 
-        "span_info": [
-          [
-            "Hotel-Inform", 
-            "Name", 
-            "Express by Holiday Inn Cambridge", 
-            1, 
-            5
-          ]
-        ]
-      }, 
-      {
-        "text": "Is that a guesthouse or a hotel? I'd really prefer a guesthouse.", 
-        "metadata": {}, 
-        "dialog_act": {
-          "Hotel-Inform": [
-            [
-              "Type", 
-              "guesthouse"
-            ]
-          ]
-        }, 
-        "span_info": [
-          [
-            "Hotel-Inform", 
-            "Type", 
-            "guesthouse", 
-            3, 
-            3
-          ]
-        ]
-      }, 
-      {
-        "text": "It's a hotel. There are 5 guesthouses in the area. Do you prefer cheap or moderate for the price range?", 
-        "metadata": {
-          "taxi": {
-            "book": {
-              "booked": []
-            }, 
-            "semi": {
-              "leaveAt": "", 
-              "destination": "", 
-              "departure": "", 
-              "arriveBy": ""
-            }
-          }, 
-          "police": {
-            "book": {
-              "booked": []
-            }, 
-            "semi": {}
-          }, 
-          "restaurant": {
-            "book": {
-              "booked": [], 
-              "time": "", 
-              "day": "", 
-              "people": ""
-            }, 
-            "semi": {
-              "food": "", 
-              "pricerange": "", 
-              "name": "", 
-              "area": ""
-            }
-          }, 
-          "hospital": {
-            "book": {
-              "booked": []
-            }, 
-            "semi": {
-              "department": ""
-            }
-          }, 
-          "hotel": {
-            "book": {
-              "booked": [], 
-              "stay": "", 
-              "day": "", 
-              "people": ""
-            }, 
-            "semi": {
-              "name": "express by holiday inn cambridge", 
-              "area": "east", 
-              "parking": "yes", 
-              "pricerange": "dontcare", 
-              "stars": "not mentioned", 
-              "internet": "no", 
-              "type": "guesthouse"
-            }
-          }, 
-          "attraction": {
-            "book": {
-              "booked": []
-            }, 
-            "semi": {
-              "type": "", 
-              "name": "", 
-              "area": ""
-            }
-          }, 
-          "train": {
-            "book": {
-              "booked": [], 
-              "people": ""
-            }, 
-            "semi": {
-              "leaveAt": "", 
-              "destination": "", 
-              "day": "", 
-              "arriveBy": "", 
-              "departure": ""
-            }
-          }
-        }, 
-        "dialog_act": {
-          "Hotel-Request": [
+          ], 
+          "Restaurant-Inform": [
             [
               "Price", 
-              "?"
-            ]
-          ], 
-          "Hotel-Inform": [
+              "moderately priced"
+            ], 
             [
               "Choice", 
-              "5"
-            ], 
-            [
-              "Type", 
-              "hotel"
-            ], 
-            [
-              "Type", 
-              "guesthouse"
+              "31"
             ]
           ]
         }, 
         "span_info": [
           [
-            "Hotel-Inform", 
+            "Restaurant-Inform", 
+            "Price", 
+            "moderately priced", 
+            5, 
+            6
+          ], 
+          [
+            "Restaurant-Inform", 
             "Choice", 
-            "5", 
-            7, 
-            7
-          ], 
-          [
-            "Hotel-Inform", 
-            "Type", 
-            "hotel", 
-            3, 
-            3
-          ], 
-          [
-            "Hotel-Inform", 
-            "Type", 
-            "guesthouse", 
-            8, 
-            8
+            "31", 
+            4, 
+            4
           ]
         ]
       }, 
       {
-        "text": "The price doesn't really matter. I just need free parking. It doesn't really need to have internet though. ", 
+        "text": "I'm looking for a place near the center of town that serves european food.", 
         "metadata": {}, 
-        "dialog_act": {}, 
-        "span_info": []
+        "dialog_act": {
+          "Restaurant-Inform": [
+            [
+              "Food", 
+              "european"
+            ]
+          ]
+        }, 
+        "span_info": [
+          [
+            "Restaurant-Inform", 
+            "Food", 
+            "european", 
+            13, 
+            13
+          ]
+        ]
       }, 
       {
-        "text": "There are 5 guesthouses that have free parking. Should I book one of them for you?", 
+        "text": "How about the Hotel Du Vin and Bistro?  Would you like to book a table for this restaurant?", 
         "metadata": {
           "taxi": {
             "book": {
@@ -494,10 +241,10 @@
               "people": ""
             }, 
             "semi": {
-              "food": "", 
-              "pricerange": "", 
-              "name": "", 
-              "area": ""
+              "food": "european", 
+              "pricerange": "moderate", 
+              "name": "not mentioned", 
+              "area": "centre"
             }
           }, 
           "hospital": {
@@ -516,13 +263,13 @@
               "people": ""
             }, 
             "semi": {
-              "name": "not mentioned", 
-              "area": "east", 
-              "parking": "yes", 
-              "pricerange": "dontcare", 
-              "stars": "not mentioned", 
-              "internet": "no", 
-              "type": "guesthouse"
+              "name": "", 
+              "area": "", 
+              "parking": "", 
+              "pricerange": "", 
+              "stars": "", 
+              "internet": "", 
+              "type": ""
             }
           }, 
           "attraction": {
@@ -556,59 +303,68 @@
               "none"
             ]
           ], 
-          "Hotel-Inform": [
+          "Restaurant-Inform": [
             [
-              "Type", 
-              "guesthouse"
-            ], 
-            [
-              "Parking", 
-              "none"
-            ], 
-            [
-              "Choice", 
-              "5"
+              "Name", 
+              "Hotel Du Vin and Bistro"
             ]
           ]
         }, 
         "span_info": [
           [
-            "Hotel-Inform", 
-            "Type", 
-            "guesthouse", 
+            "Restaurant-Inform", 
+            "Name", 
+            "Hotel Du Vin and Bistro", 
             3, 
-            3
-          ], 
-          [
-            "Hotel-Inform", 
-            "Choice", 
-            "5", 
-            2, 
-            2
+            7
           ]
         ]
       }, 
       {
-        "text": "Okay, none of them DON'T offer free wifi? If not, I'll need the address for one that does have wifi, please. Tell me about your favorite.", 
+        "text": "Yes, that would work. Could you make it for Sunday at 16:30 for 1.", 
         "metadata": {}, 
         "dialog_act": {
-          "Hotel-Inform": [
+          "Restaurant-Inform": [
             [
-              "Internet", 
-              "yes"
-            ]
-          ], 
-          "Hotel-Request": [
+              "Time", 
+              "16:30"
+            ], 
             [
-              "Addr", 
-              "?"
+              "Day", 
+              "sunday"
+            ], 
+            [
+              "People", 
+              "1"
             ]
           ]
         }, 
-        "span_info": []
+        "span_info": [
+          [
+            "Restaurant-Inform", 
+            "Time", 
+            "16:30", 
+            13, 
+            13
+          ], 
+          [
+            "Restaurant-Inform", 
+            "Day", 
+            "sunday", 
+            11, 
+            11
+          ], 
+          [
+            "Restaurant-Inform", 
+            "People", 
+            "1", 
+            15, 
+            15
+          ]
+        ]
       }, 
       {
-        "text": "The allenbell is a guesthouse on the east.  The addres sis 517a coldham lane post code cb13js.", 
+        "text": "That booking was unsuccessful, I'm sorry.  Is there another day or time that would work?", 
         "metadata": {
           "taxi": {
             "book": {
@@ -630,15 +386,15 @@
           "restaurant": {
             "book": {
               "booked": [], 
-              "time": "", 
-              "day": "", 
-              "people": ""
+              "time": "16:30", 
+              "day": "sunday", 
+              "people": "1"
             }, 
             "semi": {
-              "food": "", 
-              "pricerange": "", 
-              "name": "", 
-              "area": ""
+              "food": "european", 
+              "pricerange": "moderate", 
+              "name": "hotel du vin and bistro", 
+              "area": "centre"
             }
           }, 
           "hospital": {
@@ -657,13 +413,13 @@
               "people": ""
             }, 
             "semi": {
-              "name": "not mentioned", 
-              "area": "east", 
-              "parking": "yes", 
-              "pricerange": "dontcare", 
-              "stars": "not mentioned", 
-              "internet": "no", 
-              "type": "guesthouse"
+              "name": "", 
+              "area": "", 
+              "parking": "", 
+              "pricerange": "", 
+              "stars": "", 
+              "internet": "", 
+              "type": ""
             }
           }, 
           "attraction": {
@@ -691,187 +447,19 @@
           }
         }, 
         "dialog_act": {
-          "Hotel-Recommend": [
+          "Booking-NoBook": [
             [
-              "Area", 
-              "east"
-            ], 
-            [
-              "Addr", 
-              "517a coldham lane"
-            ], 
-            [
-              "Post", 
-              "cb13js"
-            ], 
-            [
-              "Name", 
-              "allenbell"
-            ], 
-            [
-              "Type", 
-              "guesthouse"
+              "none", 
+              "none"
             ]
-          ]
-        }, 
-        "span_info": [
-          [
-            "Hotel-Recommend", 
-            "Area", 
-            "east", 
-            7, 
-            7
           ], 
-          [
-            "Hotel-Recommend", 
-            "Addr", 
-            "517a coldham lane", 
-            12, 
-            14
-          ], 
-          [
-            "Hotel-Recommend", 
-            "Post", 
-            "cb13js", 
-            17, 
-            17
-          ], 
-          [
-            "Hotel-Recommend", 
-            "Name", 
-            "allenbell", 
-            1, 
-            1
-          ], 
-          [
-            "Hotel-Recommend", 
-            "Type", 
-            "guesthouse", 
-            4, 
-            4
-          ]
-        ]
-      }, 
-      {
-        "text": "Great. Can you help me with a train as well? I'm looking to come in from Ely.", 
-        "metadata": {}, 
-        "dialog_act": {
-          "Train-Inform": [
+          "Booking-Request": [
             [
-              "Depart", 
-              "ely"
-            ]
-          ]
-        }, 
-        "span_info": [
-          [
-            "Train-Inform", 
-            "Depart", 
-            "ely", 
-            19, 
-            19
-          ]
-        ]
-      }, 
-      {
-        "text": "What is your destination? And do you have any preference for day, departure or arrival time?", 
-        "metadata": {
-          "taxi": {
-            "book": {
-              "booked": []
-            }, 
-            "semi": {
-              "leaveAt": "", 
-              "destination": "", 
-              "departure": "", 
-              "arriveBy": ""
-            }
-          }, 
-          "police": {
-            "book": {
-              "booked": []
-            }, 
-            "semi": {}
-          }, 
-          "restaurant": {
-            "book": {
-              "booked": [], 
-              "time": "", 
-              "day": "", 
-              "people": ""
-            }, 
-            "semi": {
-              "food": "", 
-              "pricerange": "", 
-              "name": "", 
-              "area": ""
-            }
-          }, 
-          "hospital": {
-            "book": {
-              "booked": []
-            }, 
-            "semi": {
-              "department": ""
-            }
-          }, 
-          "hotel": {
-            "book": {
-              "booked": [], 
-              "stay": "", 
-              "day": "", 
-              "people": ""
-            }, 
-            "semi": {
-              "name": "not mentioned", 
-              "area": "east", 
-              "parking": "yes", 
-              "pricerange": "dontcare", 
-              "stars": "not mentioned", 
-              "internet": "no", 
-              "type": "guesthouse"
-            }
-          }, 
-          "attraction": {
-            "book": {
-              "booked": []
-            }, 
-            "semi": {
-              "type": "", 
-              "name": "", 
-              "area": ""
-            }
-          }, 
-          "train": {
-            "book": {
-              "booked": [], 
-              "people": ""
-            }, 
-            "semi": {
-              "leaveAt": "not mentioned", 
-              "destination": "not mentioned", 
-              "day": "not mentioned", 
-              "arriveBy": "not mentioned", 
-              "departure": "ely"
-            }
-          }
-        }, 
-        "dialog_act": {
-          "Train-Request": [
+              "Time", 
+              "?"
+            ], 
             [
               "Day", 
-              "?"
-            ], 
-            [
-              "Dest", 
-              "?"
-            ], 
-            [
-              "Leave", 
-              "?"
-            ], 
-            [
-              "Arrive", 
               "?"
             ]
           ]
@@ -879,39 +467,28 @@
         "span_info": []
       }, 
       {
-        "text": "I want to go from cambridge to ely, no preference for time but I need to book for 8 people.", 
+        "text": "How about 15:30?", 
         "metadata": {}, 
         "dialog_act": {
-          "Train-Inform": [
+          "Restaurant-Inform": [
             [
-              "Dest", 
-              "ely"
-            ], 
-            [
-              "Depart", 
-              "cambridge"
+              "Time", 
+              "15:30"
             ]
           ]
         }, 
         "span_info": [
           [
-            "Train-Inform", 
-            "Dest", 
-            "ely", 
-            7, 
-            7
-          ], 
-          [
-            "Train-Inform", 
-            "Depart", 
-            "cambridge", 
-            5, 
-            5
+            "Restaurant-Inform", 
+            "Time", 
+            "15:30", 
+            2, 
+            2
           ]
         ]
       }, 
       {
-        "text": "There are trains that run every two hours every day starting at 5:50. Do you know what day you'd like to travel?", 
+        "text": "They do indeed have a table at that time. Your reference number is 0WBNIZLJ.", 
         "metadata": {
           "taxi": {
             "book": {
@@ -932,16 +509,21 @@
           }, 
           "restaurant": {
             "book": {
-              "booked": [], 
-              "time": "", 
-              "day": "", 
-              "people": ""
+              "booked": [
+                {
+                  "name": "hotel du vin and bistro", 
+                  "reference": "0WBNIZLJ"
+                }
+              ], 
+              "time": "15:30", 
+              "day": "sunday", 
+              "people": "1"
             }, 
             "semi": {
-              "food": "", 
-              "pricerange": "", 
-              "name": "", 
-              "area": ""
+              "food": "european", 
+              "pricerange": "moderate", 
+              "name": "hotel du vin and bistro", 
+              "area": "centre"
             }
           }, 
           "hospital": {
@@ -960,13 +542,13 @@
               "people": ""
             }, 
             "semi": {
-              "name": "not mentioned", 
-              "area": "east", 
-              "parking": "yes", 
-              "pricerange": "dontcare", 
-              "stars": "not mentioned", 
-              "internet": "no", 
-              "type": "guesthouse"
+              "name": "", 
+              "area": "", 
+              "parking": "", 
+              "pricerange": "", 
+              "stars": "", 
+              "internet": "", 
+              "type": ""
             }
           }, 
           "attraction": {
@@ -982,86 +564,216 @@
           "train": {
             "book": {
               "booked": [], 
-              "people": "8"
+              "people": ""
             }, 
             "semi": {
-              "leaveAt": "dontcare", 
-              "destination": "ely", 
-              "day": "not mentioned", 
-              "arriveBy": "dontcare", 
-              "departure": "cambridge"
+              "leaveAt": "", 
+              "destination": "", 
+              "day": "", 
+              "arriveBy": "", 
+              "departure": ""
             }
           }
         }, 
         "dialog_act": {
-          "Train-Inform": [
+          "Booking-Book": [
             [
-              "Leave", 
-              "starting at 5:50"
+              "Ref", 
+              "0WBNIZLJ"
+            ]
+          ]
+        }, 
+        "span_info": [
+          [
+            "Booking-Book", 
+            "Ref", 
+            "0WBNIZLJ", 
+            14, 
+            14
+          ]
+        ]
+      }, 
+      {
+        "text": "Thank you. Is there a museum in the same area as the restaurant that I could go to?", 
+        "metadata": {}, 
+        "dialog_act": {
+          "Attraction-Inform": [
+            [
+              "Area", 
+              "centre"
+            ], 
+            [
+              "Type", 
+              "museum"
+            ]
+          ]
+        }, 
+        "span_info": [
+          [
+            "Attraction-Inform", 
+            "Area", 
+            "centre", 
+            9, 
+            10
+          ], 
+          [
+            "Attraction-Inform", 
+            "Type", 
+            "museum", 
+            6, 
+            6
+          ]
+        ]
+      }, 
+      {
+        "text": "There are 11, I would recommend broughton house gallery because it has free admission.", 
+        "metadata": {
+          "taxi": {
+            "book": {
+              "booked": []
+            }, 
+            "semi": {
+              "leaveAt": "", 
+              "destination": "", 
+              "departure": "", 
+              "arriveBy": ""
+            }
+          }, 
+          "police": {
+            "book": {
+              "booked": []
+            }, 
+            "semi": {}
+          }, 
+          "restaurant": {
+            "book": {
+              "booked": [
+                {
+                  "name": "hotel du vin and bistro", 
+                  "reference": "0WBNIZLJ"
+                }
+              ], 
+              "time": "15:30", 
+              "day": "sunday", 
+              "people": "1"
+            }, 
+            "semi": {
+              "food": "european", 
+              "pricerange": "moderate", 
+              "name": "hotel du vin and bistro", 
+              "area": "centre"
+            }
+          }, 
+          "hospital": {
+            "book": {
+              "booked": []
+            }, 
+            "semi": {
+              "department": ""
+            }
+          }, 
+          "hotel": {
+            "book": {
+              "booked": [], 
+              "stay": "", 
+              "day": "", 
+              "people": ""
+            }, 
+            "semi": {
+              "name": "", 
+              "area": "", 
+              "parking": "", 
+              "pricerange": "", 
+              "stars": "", 
+              "internet": "", 
+              "type": ""
+            }
+          }, 
+          "attraction": {
+            "book": {
+              "booked": []
+            }, 
+            "semi": {
+              "type": "museum", 
+              "name": "not mentioned", 
+              "area": "centre"
+            }
+          }, 
+          "train": {
+            "book": {
+              "booked": [], 
+              "people": ""
+            }, 
+            "semi": {
+              "leaveAt": "", 
+              "destination": "", 
+              "day": "", 
+              "arriveBy": "", 
+              "departure": ""
+            }
+          }
+        }, 
+        "dialog_act": {
+          "Attraction-Recommend": [
+            [
+              "Fee", 
+              "free"
+            ], 
+            [
+              "Name", 
+              "broughton house gallery"
             ]
           ], 
-          "Train-Request": [
+          "Attraction-Inform": [
             [
-              "Day", 
+              "Choice", 
+              "11"
+            ]
+          ]
+        }, 
+        "span_info": [
+          [
+            "Attraction-Recommend", 
+            "Fee", 
+            "free", 
+            13, 
+            13
+          ], 
+          [
+            "Attraction-Recommend", 
+            "Name", 
+            "broughton house gallery", 
+            7, 
+            9
+          ], 
+          [
+            "Attraction-Inform", 
+            "Choice", 
+            "11", 
+            2, 
+            2
+          ]
+        ]
+      }, 
+      {
+        "text": "Alright, that sounds good to me. Could you give me their address and phone number please?", 
+        "metadata": {}, 
+        "dialog_act": {
+          "Attraction-Request": [
+            [
+              "Addr", 
+              "?"
+            ], 
+            [
+              "Phone", 
               "?"
             ]
           ]
         }, 
-        "span_info": [
-          [
-            "Train-Inform", 
-            "Leave", 
-            "starting at 5:50", 
-            10, 
-            12
-          ]
-        ]
+        "span_info": []
       }, 
       {
-        "text": "I'm looking for Wednesday , arrive by 11:30 for 8 people Please.", 
-        "metadata": {}, 
-        "dialog_act": {
-          "Train-Inform": [
-            [
-              "Day", 
-              "wednesday"
-            ], 
-            [
-              "Arrive", 
-              "11:30"
-            ], 
-            [
-              "People", 
-              "8"
-            ]
-          ]
-        }, 
-        "span_info": [
-          [
-            "Train-Inform", 
-            "Day", 
-            "wednesday", 
-            4, 
-            4
-          ], 
-          [
-            "Train-Inform", 
-            "Arrive", 
-            "11:30", 
-            8, 
-            8
-          ], 
-          [
-            "Train-Inform", 
-            "People", 
-            "8", 
-            10, 
-            10
-          ]
-        ]
-      }, 
-      {
-        "text": "Booking was successful, the total fee is 35.2 GBP payable at the station. You reference number is 7ZCVR4Q3. Can I help you with anything else?", 
+        "text": "Sure, their address is 98 King Street, and the phone number is 01223314960.", 
         "metadata": {
           "taxi": {
             "book": {
@@ -1082,16 +794,21 @@
           }, 
           "restaurant": {
             "book": {
-              "booked": [], 
-              "time": "", 
-              "day": "", 
-              "people": ""
+              "booked": [
+                {
+                  "name": "hotel du vin and bistro", 
+                  "reference": "0WBNIZLJ"
+                }
+              ], 
+              "time": "15:30", 
+              "day": "sunday", 
+              "people": "1"
             }, 
             "semi": {
-              "food": "", 
-              "pricerange": "", 
-              "name": "", 
-              "area": ""
+              "food": "european", 
+              "pricerange": "moderate", 
+              "name": "hotel du vin and bistro", 
+              "area": "centre"
             }
           }, 
           "hospital": {
@@ -1110,13 +827,13 @@
               "people": ""
             }, 
             "semi": {
-              "name": "not mentioned", 
-              "area": "east", 
-              "parking": "yes", 
-              "pricerange": "dontcare", 
-              "stars": "not mentioned", 
-              "internet": "no", 
-              "type": "guesthouse"
+              "name": "", 
+              "area": "", 
+              "parking": "", 
+              "pricerange": "", 
+              "stars": "", 
+              "internet": "", 
+              "type": ""
             }
           }, 
           "attraction": {
@@ -1124,64 +841,59 @@
               "booked": []
             }, 
             "semi": {
-              "type": "", 
-              "name": "", 
-              "area": ""
+              "type": "museum", 
+              "name": "broughton house gallery", 
+              "area": "centre"
             }
           }, 
           "train": {
             "book": {
-              "booked": [
-                {
-                  "trainID": "TR5626", 
-                  "reference": "7ZCVR4Q3"
-                }
-              ], 
-              "people": "8"
+              "booked": [], 
+              "people": ""
             }, 
             "semi": {
-              "leaveAt": "dontcare", 
-              "destination": "ely", 
-              "day": "wednesday", 
-              "arriveBy": "11:30", 
-              "departure": "cambridge"
+              "leaveAt": "", 
+              "destination": "", 
+              "day": "", 
+              "arriveBy": "", 
+              "departure": ""
             }
           }
         }, 
         "dialog_act": {
-          "Train-OfferBooked": [
+          "Attraction-Inform": [
             [
-              "Ref", 
-              "7ZCVR4Q3"
+              "Addr", 
+              "98 King Street"
             ], 
             [
-              "Ticket", 
-              "35.2 GBP"
+              "Phone", 
+              "01223314960"
             ]
           ]
         }, 
         "span_info": [
           [
-            "Train-OfferBooked", 
-            "Ref", 
-            "7ZCVR4Q3", 
-            19, 
-            19
+            "Attraction-Inform", 
+            "Addr", 
+            "98 King Street", 
+            5, 
+            7
           ], 
           [
-            "Train-OfferBooked", 
-            "Ticket", 
-            "35.2 GBP", 
-            8, 
-            9
+            "Attraction-Inform", 
+            "Phone", 
+            "01223314960", 
+            14, 
+            14
           ]
         ]
       }, 
       {
-        "text": "No, I don't need anything else right now.  Thank you for your assistance.  Good Bye.", 
+        "text": "Thank you. that is all the information I'l be needing today!", 
         "metadata": {}, 
         "dialog_act": {
-          "general-bye": [
+          "general-thank": [
             [
               "none", 
               "none"
@@ -1191,7 +903,7 @@
         "span_info": []
       }, 
       {
-        "text": "Thank you and enjoy your visit. Have a great day.", 
+        "text": "Have a wonderful time!", 
         "metadata": {
           "taxi": {
             "book": {
@@ -1212,16 +924,21 @@
           }, 
           "restaurant": {
             "book": {
-              "booked": [], 
-              "time": "", 
-              "day": "", 
-              "people": ""
+              "booked": [
+                {
+                  "name": "hotel du vin and bistro", 
+                  "reference": "0WBNIZLJ"
+                }
+              ], 
+              "time": "15:30", 
+              "day": "sunday", 
+              "people": "1"
             }, 
             "semi": {
-              "food": "", 
-              "pricerange": "", 
-              "name": "", 
-              "area": ""
+              "food": "european", 
+              "pricerange": "moderate", 
+              "name": "hotel du vin and bistro", 
+              "area": "centre"
             }
           }, 
           "hospital": {
@@ -1240,13 +957,13 @@
               "people": ""
             }, 
             "semi": {
-              "name": "not mentioned", 
-              "area": "east", 
-              "parking": "yes", 
-              "pricerange": "dontcare", 
-              "stars": "not mentioned", 
-              "internet": "no", 
-              "type": "guesthouse"
+              "name": "", 
+              "area": "", 
+              "parking": "", 
+              "pricerange": "", 
+              "stars": "", 
+              "internet": "", 
+              "type": ""
             }
           }, 
           "attraction": {
@@ -1254,27 +971,22 @@
               "booked": []
             }, 
             "semi": {
-              "type": "", 
-              "name": "", 
-              "area": ""
+              "type": "museum", 
+              "name": "broughton house gallery", 
+              "area": "centre"
             }
           }, 
           "train": {
             "book": {
-              "booked": [
-                {
-                  "trainID": "TR5626", 
-                  "reference": "7ZCVR4Q3"
-                }
-              ], 
-              "people": "8"
+              "booked": [], 
+              "people": ""
             }, 
             "semi": {
-              "leaveAt": "dontcare", 
-              "destination": "ely", 
-              "day": "wednesday", 
-              "arriveBy": "11:30", 
-              "departure": "cambridge"
+              "leaveAt": "", 
+              "destination": "", 
+              "day": "", 
+              "arriveBy": "", 
+              "departure": ""
             }
           }
         }, 

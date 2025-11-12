@@ -11,7 +11,7 @@ ALLOWED_DOMAINS = {"restaurant", "hotel", "attraction"}
 # 每个域保留在 text 中的关键字段
 DOMAIN_FIELDS = {
     "restaurant": ["food", "area", "pricerange"],
-    "hotel":      ["area", "pricerange", "stars", "parking", "internet", "wifi"],
+    "hotel":      ["area", "pricerange", "stars", "parking", "internet", "wifi", "type"],
     # "attraction": ["type", "area", "pricerange", "entrance_fee", "openhours"],
     "attraction": ["type", "area", "pricerange", "entrance_fee"],
 }

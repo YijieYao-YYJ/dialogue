@@ -5,7 +5,7 @@ from pathlib import Path
 from collections import Counter
 
 
-QUERIES_PATH  = Path("queries1.json")
+QUERIES_PATH  = Path("queries_dev.json")
 ENTITIES_PATH = Path("entities.json")
 OUT_PATH      = Path("bm25_results.json")
 
@@ -21,8 +21,22 @@ def tokenize(text: str):
     if not text:
         return []
     text = text.lower()
-    # 英式拼写统一
+    # 统一
     text = text.replace("centre", "center")
+    text = text.replace("moderately", "moderate")
+    text = text.replace("night club", "nightclub")
+    text = text.replace("swimming pool", "swimmingpool")
+    text = text.replace("concert hall", "concerthall")
+    text = text.replace("museums", "museum")
+    text = text.replace("colleges", "college")
+    text = text.replace("hotels", "hotel")
+    text = text.replace("guest house", "guesthouse")
+    text = text.replace("guest houses", "guesthouse")
+    text = text.replace("mid price", "moderate")
+    text = text.replace("downtown", "center")
+    text = text.replace("inexpensive", "cheap")
+    text = text.replace("cheaply", "cheap")
+
     return _token_re.findall(text)
 
 # -------------------- Load entities --------------------
@@ -118,15 +132,43 @@ def main():
     queries = json.loads(QUERIES_PATH.read_text(encoding="utf-8"))
 
     results = []
+    # for q in queries:
+    #     domains = q.get("domains") or []
+    #     domains = [d for d in domains if d in ALLOWED_DOMAINS]
+    #     if not domains:
+    #         continue  # 此 USER 轮不检索
+    #
+    #     q_text = q.get("query_text", "")
+    #     per_domain = []
+    #     for dom in _unique_keep_order(domains):
+    #         hits = bm25.query(q_text, allowed_domains={dom}, topk=TOPK)
+    #         per_domain.append({
+    #             "domain": dom,
+    #             "topk": pack_top_items(entities, hits)
+    #         })
+    #
+    #     results.append({
+    #         "dialogue_id": q.get("dialogue_id"),
+    #         "turn": q.get("turn"),
+    #         "domains": _unique_keep_order(domains),
+    #         "results": per_domain
+    #     })
     for q in queries:
-        domains = q.get("domains") or []
-        domains = [d for d in domains if d in ALLOWED_DOMAINS]
-        if not domains:
+        # 仅当 constraints 非空才检索
+        cons_list = q.get("constraints") or []
+        if not cons_list:
             continue  # 此 USER 轮不检索
+
+        # 域来源改为 constraints 中的 domain
+        domains = [c.get("domain") for c in cons_list if isinstance(c, dict)]
+        domains = [d for d in domains if d in ALLOWED_DOMAINS]
+        domains = _unique_keep_order(domains)
+        if not domains:
+            continue  # 无有效域则不检索
 
         q_text = q.get("query_text", "")
         per_domain = []
-        for dom in _unique_keep_order(domains):
+        for dom in domains:
             hits = bm25.query(q_text, allowed_domains={dom}, topk=TOPK)
             per_domain.append({
                 "domain": dom,
@@ -136,7 +178,7 @@ def main():
         results.append({
             "dialogue_id": q.get("dialogue_id"),
             "turn": q.get("turn"),
-            "domains": _unique_keep_order(domains),
+            "domains": domains,
             "results": per_domain
         })
 

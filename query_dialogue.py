@@ -21,7 +21,8 @@ from typing import Dict, List, Tuple, Optional, Set, Any
 
 
 INPUT_PATH  = Path("MultiWOZ_2.1/train/dialogues_001.json")
-OUTPUT_PATH = Path("queries1.json")
+INPUT_DIR  = Path("MultiWOZ_2.1/train")
+OUTPUT_PATH = Path("queries.json")
 
 
 ALLOWED_DOMAINS: Set[str] = {"restaurant", "hotel", "attraction"}
@@ -196,18 +197,49 @@ def parse_dialogues_with_next(obj: Dict[str, Dict], allowed_domains: Set[str]) -
 
     return out
 
-
 def main():
-    data = json.loads(INPUT_PATH.read_text(encoding="utf-8"))
-    obj = {str(k): v for k, v in data.items()}
+    if not INPUT_DIR.exists():
+        raise FileNotFoundError(f"输入目录不存在：{INPUT_DIR}")
 
+    # 1) 合并 train 目录下所有 *.json（顶层应为 dict）
+    obj = {}
+    files = sorted(INPUT_DIR.glob("*.json"))
+    for i, fp in enumerate(files, 1):
+        try:
+            data = json.loads(fp.read_text(encoding="utf-8"))
+        except Exception as e:
+            print(f"⚠️ 跳过无法读取的文件 {fp.name}: {e}")
+            continue
+        if isinstance(data, dict):
+            for k, v in data.items():
+                obj[str(k)] = v
+        else:
+            print(f"⚠️ 跳过（顶层不是 dict）: {fp.name}")
+
+
+    print(f"📦 已读取 {len(files)} 个 JSON 文件，合并得到 {len(obj)} 个对话。")
+
+    # 2) 解析并生成 queries
     out_items = parse_dialogues_with_next(obj, ALLOWED_DOMAINS)
 
-    # 只保留“至少一个域写出了非空 constraints”的 USER 轮：
+    # （可选）只保留 constraints 非空的 USER 轮：
     # out_items = [x for x in out_items if x["constraints"]]
 
+    # 3) 写出
     OUTPUT_PATH.write_text(json.dumps(out_items, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"✅ 已生成 {len(out_items)} 条查询 -> {OUTPUT_PATH}")
+
+# def main():
+#     data = json.loads(INPUT_PATH.read_text(encoding="utf-8"))
+#     obj = {str(k): v for k, v in data.items()}
+#
+#     out_items = parse_dialogues_with_next(obj, ALLOWED_DOMAINS)
+#
+#     # 只保留“至少一个域写出了非空 constraints”的 USER 轮：
+#     # out_items = [x for x in out_items if x["constraints"]]
+#
+#     OUTPUT_PATH.write_text(json.dumps(out_items, ensure_ascii=False, indent=2), encoding="utf-8")
+#     print(f"✅ 已生成 {len(out_items)} 条查询 -> {OUTPUT_PATH}")
 
 
 if __name__ == "__main__":

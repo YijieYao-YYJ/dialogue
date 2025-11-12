@@ -3,8 +3,8 @@ from pathlib import Path
 from typing import Any, Set
 
 
-QUERIES_PATH      = Path("queries1.json")
-BM25_RESULTS_PATH = Path("bm25_results.json")
+QUERIES_PATH      = Path("queries_dev.json")
+RESULTS_PATH = Path("bm25_results.json")
 
 # 参与评测的域
 ALLOWED_DOMAINS: Set[str] = {"restaurant", "hotel", "attraction"}
@@ -25,7 +25,7 @@ def is_filled(v: Any) -> bool:
 
 
 def load_queries(path: Path):
-    """读取 queries1.json：仅保留允许域、非空 kv 的 constraints。"""
+    """读取：仅保留允许域、非空 kv 的 constraints。"""
     data = json.loads(path.read_text(encoding="utf-8"))
     out = []
     for it in data:
@@ -79,7 +79,7 @@ def prf(tp: int, p: int, g: int):
 def evaluate():
     queries = load_queries(QUERIES_PATH)
     # print(queries[:10])
-    pred_index = load_bm25(BM25_RESULTS_PATH)
+    pred_index = load_bm25(RESULTS_PATH)
     db = get_database()
 
     overall = {K: {"tp":0, "p":0, "g":0, "samples":0} for K in K_LIST}
