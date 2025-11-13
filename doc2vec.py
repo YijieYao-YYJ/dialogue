@@ -49,6 +49,8 @@ def tokenize(text: str):
     text = text.replace("downtown", "center")
     text = text.replace("inexpensive", "cheap")
     text = text.replace("cheaply", "cheap")
+    text = text.replace("nightclubs", "nightclub")
+    text = text.replace("boating", "boat")
     return _token_re.findall(text)
 
 # -------------------- IO --------------------

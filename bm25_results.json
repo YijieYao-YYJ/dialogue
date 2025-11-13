@@ -11898,7 +11898,40 @@
     "results": [
       {
         "domain": "attraction",
-        "topk": []
+        "topk": [
+          {
+            "doc_id": "attraction#67",
+            "domain": "attraction",
+            "score": 4.886619,
+            "name": "the cambridge punter",
+            "area": "center",
+            "pricerange": null
+          },
+          {
+            "doc_id": "attraction#61",
+            "domain": "attraction",
+            "score": 4.886619,
+            "name": "scudamores punting co",
+            "area": "center",
+            "pricerange": null
+          },
+          {
+            "doc_id": "attraction#55",
+            "domain": "attraction",
+            "score": 4.886619,
+            "name": "riverboat georgina",
+            "area": "north",
+            "pricerange": null
+          },
+          {
+            "doc_id": "attraction#8",
+            "domain": "attraction",
+            "score": 4.886619,
+            "name": "camboats",
+            "area": "east",
+            "pricerange": null
+          }
+        ]
       }
     ]
   },
@@ -11913,43 +11946,43 @@
         "domain": "attraction",
         "topk": [
           {
+            "doc_id": "attraction#8",
+            "domain": "attraction",
+            "score": 7.556193,
+            "name": "camboats",
+            "area": "east",
+            "pricerange": null
+          },
+          {
+            "doc_id": "attraction#55",
+            "domain": "attraction",
+            "score": 7.509818,
+            "name": "riverboat georgina",
+            "area": "north",
+            "pricerange": null
+          },
+          {
+            "doc_id": "attraction#67",
+            "domain": "attraction",
+            "score": 5.681009,
+            "name": "the cambridge punter",
+            "area": "center",
+            "pricerange": null
+          },
+          {
+            "doc_id": "attraction#61",
+            "domain": "attraction",
+            "score": 5.681009,
+            "name": "scudamores punting co",
+            "area": "center",
+            "pricerange": null
+          },
+          {
             "doc_id": "attraction#57",
             "domain": "attraction",
             "score": 4.608498,
             "name": "saint barnabas press gallery",
             "area": "east",
-            "pricerange": "free"
-          },
-          {
-            "doc_id": "attraction#29",
-            "domain": "attraction",
-            "score": 4.608498,
-            "name": "gallery at twelve a high street",
-            "area": "east",
-            "pricerange": "free"
-          },
-          {
-            "doc_id": "attraction#18",
-            "domain": "attraction",
-            "score": 4.608498,
-            "name": "cherry hinton water play",
-            "area": "east",
-            "pricerange": "free"
-          },
-          {
-            "doc_id": "attraction#11",
-            "domain": "attraction",
-            "score": 4.608498,
-            "name": "cambridge artworks",
-            "area": "east",
-            "pricerange": "free"
-          },
-          {
-            "doc_id": "attraction#43",
-            "domain": "attraction",
-            "score": 4.573504,
-            "name": "milton country park",
-            "area": "north",
             "pricerange": "free"
           }
         ]
@@ -13765,28 +13798,28 @@
             "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#57",
+            "doc_id": "attraction#8",
             "domain": "attraction",
-            "score": 11.184083,
-            "name": "saint barnabas press gallery",
+            "score": 12.445623,
+            "name": "camboats",
             "area": "east",
-            "pricerange": "free"
+            "pricerange": null
           },
           {
-            "doc_id": "attraction#29",
+            "doc_id": "attraction#55",
             "domain": "attraction",
-            "score": 11.184083,
-            "name": "gallery at twelve a high street",
-            "area": "east",
-            "pricerange": "free"
+            "score": 12.399248,
+            "name": "riverboat georgina",
+            "area": "north",
+            "pricerange": null
           },
           {
-            "doc_id": "attraction#18",
+            "doc_id": "attraction#67",
             "domain": "attraction",
-            "score": 11.184083,
-            "name": "cherry hinton water play",
-            "area": "east",
-            "pricerange": "free"
+            "score": 11.362017,
+            "name": "the cambridge punter",
+            "area": "center",
+            "pricerange": null
           }
         ]
       }
@@ -21023,6 +21056,14 @@
         "domain": "attraction",
         "topk": [
           {
+            "doc_id": "attraction#55",
+            "domain": "attraction",
+            "score": 15.014016,
+            "name": "riverboat georgina",
+            "area": "north",
+            "pricerange": null
+          },
+          {
             "doc_id": "attraction#43",
             "domain": "attraction",
             "score": 10.046455,
@@ -21031,36 +21072,28 @@
             "pricerange": "free"
           },
           {
-            "doc_id": "attraction#15",
+            "doc_id": "attraction#67",
             "domain": "attraction",
-            "score": 7.833174,
-            "name": "cambridge university botanic gardens",
+            "score": 9.773239,
+            "name": "the cambridge punter",
             "area": "center",
-            "pricerange": "moderate"
+            "pricerange": null
           },
           {
-            "doc_id": "attraction#76",
+            "doc_id": "attraction#61",
             "domain": "attraction",
-            "score": 6.091861,
-            "name": "wandlebury country park",
-            "area": "south",
-            "pricerange": "free"
+            "score": 9.773239,
+            "name": "scudamores punting co",
+            "area": "center",
+            "pricerange": null
           },
           {
-            "doc_id": "attraction#62",
+            "doc_id": "attraction#8",
             "domain": "attraction",
-            "score": 6.091861,
-            "name": "sheep's green and lammas land park fen causeway",
-            "area": "south",
-            "pricerange": "free"
-          },
-          {
-            "doc_id": "attraction#18",
-            "domain": "attraction",
-            "score": 6.091861,
-            "name": "cherry hinton water play",
+            "score": 9.773239,
+            "name": "camboats",
             "area": "east",
-            "pricerange": "free"
+            "pricerange": null
           }
         ]
       }
@@ -23345,43 +23378,43 @@
         "domain": "attraction",
         "topk": [
           {
-            "doc_id": "attraction#42",
+            "doc_id": "attraction#73",
             "domain": "attraction",
-            "score": 6.049805,
-            "name": "magdalene college",
-            "area": "west",
-            "pricerange": "free"
-          },
-          {
-            "doc_id": "attraction#23",
-            "domain": "attraction",
-            "score": 6.049805,
-            "name": "clare hall",
-            "area": "west",
-            "pricerange": "free"
-          },
-          {
-            "doc_id": "attraction#20",
-            "domain": "attraction",
-            "score": 6.049805,
-            "name": "churchill college",
-            "area": "west",
-            "pricerange": "free"
-          },
-          {
-            "doc_id": "attraction#53",
-            "domain": "attraction",
-            "score": 5.509001,
-            "name": "queens' college",
-            "area": "west",
+            "score": 7.833382,
+            "name": "the place",
+            "area": "south",
             "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#22",
+            "doc_id": "attraction#69",
             "domain": "attraction",
-            "score": 5.509001,
-            "name": "clare college",
-            "area": "west",
+            "score": 6.367374,
+            "name": "the fez club",
+            "area": "center",
+            "pricerange": "moderate"
+          },
+          {
+            "doc_id": "attraction#64",
+            "domain": "attraction",
+            "score": 6.367374,
+            "name": "soul tree nightclub",
+            "area": "center",
+            "pricerange": "cheap"
+          },
+          {
+            "doc_id": "attraction#36",
+            "domain": "attraction",
+            "score": 6.367374,
+            "name": "kambar",
+            "area": "center",
+            "pricerange": "moderate"
+          },
+          {
+            "doc_id": "attraction#24",
+            "domain": "attraction",
+            "score": 6.367374,
+            "name": "club salsa",
+            "area": "center",
             "pricerange": "moderate"
           }
         ]
@@ -32128,36 +32161,36 @@
             "pricerange": "cheap"
           },
           {
-            "doc_id": "attraction#25",
+            "doc_id": "attraction#69",
             "domain": "attraction",
-            "score": 8.994873,
-            "name": "corpus christi",
-            "area": "center",
-            "pricerange": "cheap"
-          },
-          {
-            "doc_id": "attraction#59",
-            "domain": "attraction",
-            "score": 8.592838,
-            "name": "saint john's college",
+            "score": 9.936793,
+            "name": "the fez club",
             "area": "center",
             "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#75",
+            "doc_id": "attraction#64",
             "domain": "attraction",
-            "score": 8.06231,
-            "name": "vue cinema",
+            "score": 9.936793,
+            "name": "soul tree nightclub",
             "area": "center",
-            "pricerange": null
+            "pricerange": "cheap"
           },
           {
-            "doc_id": "attraction#48",
+            "doc_id": "attraction#36",
             "domain": "attraction",
-            "score": 7.932882,
-            "name": "old schools",
+            "score": 9.936793,
+            "name": "kambar",
             "area": "center",
-            "pricerange": "free"
+            "pricerange": "moderate"
+          },
+          {
+            "doc_id": "attraction#24",
+            "domain": "attraction",
+            "score": 9.936793,
+            "name": "club salsa",
+            "area": "center",
+            "pricerange": "moderate"
           }
         ]
       }
@@ -38276,44 +38309,44 @@
         "domain": "attraction",
         "topk": [
           {
-            "doc_id": "attraction#77",
+            "doc_id": "attraction#73",
             "domain": "attraction",
-            "score": 9.273575,
-            "name": "whale of a time",
-            "area": "west",
-            "pricerange": null
-          },
-          {
-            "doc_id": "attraction#65",
-            "domain": "attraction",
-            "score": 9.273575,
-            "name": "tenpin",
+            "score": 13.216258,
+            "name": "the place",
             "area": "south",
-            "pricerange": null
+            "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#47",
+            "doc_id": "attraction#69",
             "domain": "attraction",
-            "score": 9.273575,
-            "name": "nusha",
-            "area": "south",
-            "pricerange": null
+            "score": 12.450945,
+            "name": "the fez club",
+            "area": "center",
+            "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#28",
+            "doc_id": "attraction#36",
             "domain": "attraction",
-            "score": 9.273575,
-            "name": "funky fun house",
-            "area": "east",
-            "pricerange": null
+            "score": 12.450945,
+            "name": "kambar",
+            "area": "center",
+            "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#17",
+            "doc_id": "attraction#24",
             "domain": "attraction",
-            "score": 9.273575,
-            "name": "cherry hinton hall and grounds",
-            "area": "east",
-            "pricerange": null
+            "score": 12.450945,
+            "name": "club salsa",
+            "area": "center",
+            "pricerange": "moderate"
+          },
+          {
+            "doc_id": "attraction#4",
+            "domain": "attraction",
+            "score": 12.450945,
+            "name": "ballare",
+            "area": "center",
+            "pricerange": "moderate"
           }
         ]
       }
@@ -38330,44 +38363,44 @@
         "domain": "attraction",
         "topk": [
           {
-            "doc_id": "attraction#77",
+            "doc_id": "attraction#69",
             "domain": "attraction",
-            "score": 9.273575,
-            "name": "whale of a time",
-            "area": "west",
-            "pricerange": null
+            "score": 18.257785,
+            "name": "the fez club",
+            "area": "center",
+            "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#65",
+            "doc_id": "attraction#36",
             "domain": "attraction",
-            "score": 9.273575,
-            "name": "tenpin",
-            "area": "south",
-            "pricerange": null
+            "score": 18.257785,
+            "name": "kambar",
+            "area": "center",
+            "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#47",
+            "doc_id": "attraction#24",
             "domain": "attraction",
-            "score": 9.273575,
-            "name": "nusha",
-            "area": "south",
-            "pricerange": null
+            "score": 18.257785,
+            "name": "club salsa",
+            "area": "center",
+            "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#28",
+            "doc_id": "attraction#4",
             "domain": "attraction",
-            "score": 9.273575,
-            "name": "funky fun house",
-            "area": "east",
-            "pricerange": null
+            "score": 18.257785,
+            "name": "ballare",
+            "area": "center",
+            "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#17",
+            "doc_id": "attraction#64",
             "domain": "attraction",
-            "score": 9.273575,
-            "name": "cherry hinton hall and grounds",
-            "area": "east",
-            "pricerange": null
+            "score": 13.733893,
+            "name": "soul tree nightclub",
+            "area": "center",
+            "pricerange": "cheap"
           }
         ]
       }
@@ -41268,44 +41301,44 @@
         "domain": "attraction",
         "topk": [
           {
+            "doc_id": "attraction#8",
+            "domain": "attraction",
+            "score": 12.442813,
+            "name": "camboats",
+            "area": "east",
+            "pricerange": null
+          },
+          {
+            "doc_id": "attraction#67",
+            "domain": "attraction",
+            "score": 9.776049,
+            "name": "the cambridge punter",
+            "area": "center",
+            "pricerange": null
+          },
+          {
+            "doc_id": "attraction#61",
+            "domain": "attraction",
+            "score": 9.776049,
+            "name": "scudamores punting co",
+            "area": "center",
+            "pricerange": null
+          },
+          {
+            "doc_id": "attraction#55",
+            "domain": "attraction",
+            "score": 9.776049,
+            "name": "riverboat georgina",
+            "area": "north",
+            "pricerange": null
+          },
+          {
             "doc_id": "attraction#1",
             "domain": "attraction",
             "score": 7.556193,
             "name": "abbey pool and astroturf pitch",
             "area": "east",
             "pricerange": null
-          },
-          {
-            "doc_id": "attraction#57",
-            "domain": "attraction",
-            "score": 6.266001,
-            "name": "saint barnabas press gallery",
-            "area": "east",
-            "pricerange": "free"
-          },
-          {
-            "doc_id": "attraction#29",
-            "domain": "attraction",
-            "score": 6.266001,
-            "name": "gallery at twelve a high street",
-            "area": "east",
-            "pricerange": "free"
-          },
-          {
-            "doc_id": "attraction#11",
-            "domain": "attraction",
-            "score": 6.266001,
-            "name": "cambridge artworks",
-            "area": "east",
-            "pricerange": "free"
-          },
-          {
-            "doc_id": "attraction#14",
-            "domain": "attraction",
-            "score": 5.972832,
-            "name": "cambridge museum of technology",
-            "area": "east",
-            "pricerange": "expensive"
           }
         ]
       }
@@ -42596,7 +42629,7 @@
           {
             "doc_id": "attraction#69",
             "domain": "attraction",
-            "score": 7.372583,
+            "score": 10.55627,
             "name": "the fez club",
             "area": "center",
             "pricerange": "moderate"
@@ -42604,7 +42637,7 @@
           {
             "doc_id": "attraction#64",
             "domain": "attraction",
-            "score": 7.372583,
+            "score": 10.55627,
             "name": "soul tree nightclub",
             "area": "center",
             "pricerange": "cheap"
@@ -42612,7 +42645,7 @@
           {
             "doc_id": "attraction#36",
             "domain": "attraction",
-            "score": 7.372583,
+            "score": 10.55627,
             "name": "kambar",
             "area": "center",
             "pricerange": "moderate"
@@ -42620,7 +42653,7 @@
           {
             "doc_id": "attraction#24",
             "domain": "attraction",
-            "score": 7.372583,
+            "score": 10.55627,
             "name": "club salsa",
             "area": "center",
             "pricerange": "moderate"
@@ -42628,7 +42661,7 @@
           {
             "doc_id": "attraction#4",
             "domain": "attraction",
-            "score": 7.372583,
+            "score": 10.55627,
             "name": "ballare",
             "area": "center",
             "pricerange": "moderate"
@@ -46536,6 +46569,14 @@
         "domain": "attraction",
         "topk": [
           {
+            "doc_id": "attraction#64",
+            "domain": "attraction",
+            "score": 14.197248,
+            "name": "soul tree nightclub",
+            "area": "center",
+            "pricerange": "cheap"
+          },
+          {
             "doc_id": "attraction#68",
             "domain": "attraction",
             "score": 13.367851,
@@ -46544,36 +46585,28 @@
             "pricerange": null
           },
           {
-            "doc_id": "attraction#64",
+            "doc_id": "attraction#73",
             "domain": "attraction",
-            "score": 11.013561,
-            "name": "soul tree nightclub",
-            "area": "center",
-            "pricerange": "cheap"
+            "score": 9.349417,
+            "name": "the place",
+            "area": "south",
+            "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#74",
+            "doc_id": "attraction#69",
             "domain": "attraction",
-            "score": 7.829874,
-            "name": "trinity college",
+            "score": 9.307779,
+            "name": "the fez club",
             "area": "center",
-            "pricerange": "cheap"
+            "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#31",
+            "doc_id": "attraction#36",
             "domain": "attraction",
-            "score": 7.829874,
-            "name": "great saint mary's church",
+            "score": 9.307779,
+            "name": "kambar",
             "area": "center",
-            "pricerange": "cheap"
-          },
-          {
-            "doc_id": "attraction#25",
-            "domain": "attraction",
-            "score": 7.829874,
-            "name": "corpus christi",
-            "area": "center",
-            "pricerange": "cheap"
+            "pricerange": "moderate"
           }
         ]
       }
@@ -48968,7 +49001,7 @@
           {
             "doc_id": "attraction#69",
             "domain": "attraction",
-            "score": 11.17061,
+            "score": 14.354297,
             "name": "the fez club",
             "area": "center",
             "pricerange": "moderate"
@@ -48976,7 +49009,7 @@
           {
             "doc_id": "attraction#36",
             "domain": "attraction",
-            "score": 11.17061,
+            "score": 14.354297,
             "name": "kambar",
             "area": "center",
             "pricerange": "moderate"
@@ -48984,7 +49017,7 @@
           {
             "doc_id": "attraction#24",
             "domain": "attraction",
-            "score": 11.17061,
+            "score": 14.354297,
             "name": "club salsa",
             "area": "center",
             "pricerange": "moderate"
@@ -48992,18 +49025,18 @@
           {
             "doc_id": "attraction#4",
             "domain": "attraction",
-            "score": 11.17061,
+            "score": 14.354297,
             "name": "ballare",
             "area": "center",
             "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#79",
+            "doc_id": "attraction#73",
             "domain": "attraction",
-            "score": 10.364294,
-            "name": "williams art and antiques",
-            "area": "center",
-            "pricerange": "free"
+            "score": 13.216258,
+            "name": "the place",
+            "area": "south",
+            "pricerange": "moderate"
           }
         ]
       }
@@ -51560,7 +51593,7 @@
           {
             "doc_id": "attraction#69",
             "domain": "attraction",
-            "score": 9.320858,
+            "score": 12.504545,
             "name": "the fez club",
             "area": "center",
             "pricerange": "moderate"
@@ -51568,7 +51601,7 @@
           {
             "doc_id": "attraction#36",
             "domain": "attraction",
-            "score": 9.320858,
+            "score": 12.504545,
             "name": "kambar",
             "area": "center",
             "pricerange": "moderate"
@@ -51576,7 +51609,7 @@
           {
             "doc_id": "attraction#24",
             "domain": "attraction",
-            "score": 9.320858,
+            "score": 12.504545,
             "name": "club salsa",
             "area": "center",
             "pricerange": "moderate"
@@ -51584,18 +51617,18 @@
           {
             "doc_id": "attraction#4",
             "domain": "attraction",
-            "score": 9.320858,
+            "score": 12.504545,
             "name": "ballare",
             "area": "center",
             "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#59",
+            "doc_id": "attraction#64",
             "domain": "attraction",
-            "score": 7.86072,
-            "name": "saint john's college",
+            "score": 7.980653,
+            "name": "soul tree nightclub",
             "area": "center",
-            "pricerange": "moderate"
+            "pricerange": "cheap"
           }
         ]
       }
@@ -55316,7 +55349,7 @@
           {
             "doc_id": "attraction#69",
             "domain": "attraction",
-            "score": 15.271105,
+            "score": 21.638479,
             "name": "the fez club",
             "area": "center",
             "pricerange": "moderate"
@@ -55324,7 +55357,7 @@
           {
             "doc_id": "attraction#36",
             "domain": "attraction",
-            "score": 15.271105,
+            "score": 21.638479,
             "name": "kambar",
             "area": "center",
             "pricerange": "moderate"
@@ -55332,7 +55365,7 @@
           {
             "doc_id": "attraction#24",
             "domain": "attraction",
-            "score": 15.271105,
+            "score": 21.638479,
             "name": "club salsa",
             "area": "center",
             "pricerange": "moderate"
@@ -55340,7 +55373,7 @@
           {
             "doc_id": "attraction#4",
             "domain": "attraction",
-            "score": 15.271105,
+            "score": 21.638479,
             "name": "ballare",
             "area": "center",
             "pricerange": "moderate"
@@ -55348,7 +55381,7 @@
           {
             "doc_id": "attraction#64",
             "domain": "attraction",
-            "score": 13.963316,
+            "score": 20.33069,
             "name": "soul tree nightclub",
             "area": "center",
             "pricerange": "cheap"
@@ -57528,6 +57561,14 @@
         "domain": "attraction",
         "topk": [
           {
+            "doc_id": "attraction#8",
+            "domain": "attraction",
+            "score": 10.222957,
+            "name": "camboats",
+            "area": "east",
+            "pricerange": null
+          },
+          {
             "doc_id": "attraction#18",
             "domain": "attraction",
             "score": 10.118563,
@@ -57556,14 +57597,6 @@
             "domain": "attraction",
             "score": 8.746584,
             "name": "saint barnabas press gallery",
-            "area": "east",
-            "pricerange": "free"
-          },
-          {
-            "doc_id": "attraction#29",
-            "domain": "attraction",
-            "score": 8.746584,
-            "name": "gallery at twelve a high street",
             "area": "east",
             "pricerange": "free"
           }
@@ -60444,6 +60477,14 @@
         "domain": "attraction",
         "topk": [
           {
+            "doc_id": "attraction#64",
+            "domain": "attraction",
+            "score": 7.413252,
+            "name": "soul tree nightclub",
+            "area": "center",
+            "pricerange": "cheap"
+          },
+          {
             "doc_id": "attraction#79",
             "domain": "attraction",
             "score": 7.175017,
@@ -60472,14 +60513,6 @@
             "domain": "attraction",
             "score": 7.175017,
             "name": "sidney sussex college",
-            "area": "center",
-            "pricerange": "free"
-          },
-          {
-            "doc_id": "attraction#60",
-            "domain": "attraction",
-            "score": 7.175017,
-            "name": "scott polar museum",
             "area": "center",
             "pricerange": "free"
           }
@@ -65196,44 +65229,44 @@
         "domain": "attraction",
         "topk": [
           {
-            "doc_id": "attraction#79",
+            "doc_id": "attraction#73",
             "domain": "attraction",
-            "score": 2.725226,
-            "name": "williams art and antiques",
-            "area": "center",
-            "pricerange": "free"
+            "score": 3.919178,
+            "name": "the place",
+            "area": "south",
+            "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#78",
+            "doc_id": "attraction#69",
             "domain": "attraction",
-            "score": 2.725226,
-            "name": "whipple museum of the history of science",
+            "score": 3.755073,
+            "name": "the fez club",
             "area": "center",
-            "pricerange": "free"
+            "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#70",
+            "doc_id": "attraction#64",
             "domain": "attraction",
-            "score": 2.725226,
-            "name": "the fitzwilliam museum",
+            "score": 3.755073,
+            "name": "soul tree nightclub",
             "area": "center",
-            "pricerange": "free"
+            "pricerange": "cheap"
           },
           {
-            "doc_id": "attraction#60",
+            "doc_id": "attraction#36",
             "domain": "attraction",
-            "score": 2.725226,
-            "name": "scott polar museum",
+            "score": 3.755073,
+            "name": "kambar",
             "area": "center",
-            "pricerange": "free"
+            "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#56",
+            "doc_id": "attraction#24",
             "domain": "attraction",
-            "score": 2.725226,
-            "name": "ruskin gallery",
+            "score": 3.755073,
+            "name": "club salsa",
             "area": "center",
-            "pricerange": "free"
+            "pricerange": "moderate"
           }
         ]
       }
@@ -65844,44 +65877,44 @@
         "domain": "attraction",
         "topk": [
           {
-            "doc_id": "attraction#77",
+            "doc_id": "attraction#73",
             "domain": "attraction",
-            "score": 0.856632,
-            "name": "whale of a time",
-            "area": "west",
-            "pricerange": null
-          },
-          {
-            "doc_id": "attraction#75",
-            "domain": "attraction",
-            "score": 0.856632,
-            "name": "vue cinema",
-            "area": "center",
-            "pricerange": null
-          },
-          {
-            "doc_id": "attraction#72",
-            "domain": "attraction",
-            "score": 0.856632,
-            "name": "the man on the moon",
-            "area": "center",
-            "pricerange": null
-          },
-          {
-            "doc_id": "attraction#71",
-            "domain": "attraction",
-            "score": 0.856632,
-            "name": "the junction",
+            "score": 4.674709,
+            "name": "the place",
             "area": "south",
-            "pricerange": null
+            "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#67",
+            "doc_id": "attraction#69",
             "domain": "attraction",
-            "score": 0.856632,
-            "name": "the cambridge punter",
+            "score": 3.799843,
+            "name": "the fez club",
             "area": "center",
-            "pricerange": null
+            "pricerange": "moderate"
+          },
+          {
+            "doc_id": "attraction#64",
+            "domain": "attraction",
+            "score": 3.799843,
+            "name": "soul tree nightclub",
+            "area": "center",
+            "pricerange": "cheap"
+          },
+          {
+            "doc_id": "attraction#36",
+            "domain": "attraction",
+            "score": 3.799843,
+            "name": "kambar",
+            "area": "center",
+            "pricerange": "moderate"
+          },
+          {
+            "doc_id": "attraction#24",
+            "domain": "attraction",
+            "score": 3.799843,
+            "name": "club salsa",
+            "area": "center",
+            "pricerange": "moderate"
           }
         ]
       }
@@ -65898,44 +65931,44 @@
         "domain": "attraction",
         "topk": [
           {
-            "doc_id": "attraction#77",
+            "doc_id": "attraction#73",
             "domain": "attraction",
-            "score": 0.856632,
-            "name": "whale of a time",
-            "area": "west",
-            "pricerange": null
-          },
-          {
-            "doc_id": "attraction#75",
-            "domain": "attraction",
-            "score": 0.856632,
-            "name": "vue cinema",
-            "area": "center",
-            "pricerange": null
-          },
-          {
-            "doc_id": "attraction#72",
-            "domain": "attraction",
-            "score": 0.856632,
-            "name": "the man on the moon",
-            "area": "center",
-            "pricerange": null
-          },
-          {
-            "doc_id": "attraction#71",
-            "domain": "attraction",
-            "score": 0.856632,
-            "name": "the junction",
+            "score": 8.591399,
+            "name": "the place",
             "area": "south",
-            "pricerange": null
+            "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#67",
+            "doc_id": "attraction#69",
             "domain": "attraction",
-            "score": 0.856632,
-            "name": "the cambridge punter",
+            "score": 6.98353,
+            "name": "the fez club",
             "area": "center",
-            "pricerange": null
+            "pricerange": "moderate"
+          },
+          {
+            "doc_id": "attraction#64",
+            "domain": "attraction",
+            "score": 6.98353,
+            "name": "soul tree nightclub",
+            "area": "center",
+            "pricerange": "cheap"
+          },
+          {
+            "doc_id": "attraction#36",
+            "domain": "attraction",
+            "score": 6.98353,
+            "name": "kambar",
+            "area": "center",
+            "pricerange": "moderate"
+          },
+          {
+            "doc_id": "attraction#24",
+            "domain": "attraction",
+            "score": 6.98353,
+            "name": "club salsa",
+            "area": "center",
+            "pricerange": "moderate"
           }
         ]
       }
@@ -67300,7 +67333,48 @@
     "results": [
       {
         "domain": "attraction",
-        "topk": []
+        "topk": [
+          {
+            "doc_id": "attraction#73",
+            "domain": "attraction",
+            "score": 3.916691,
+            "name": "the place",
+            "area": "south",
+            "pricerange": "moderate"
+          },
+          {
+            "doc_id": "attraction#69",
+            "domain": "attraction",
+            "score": 3.183687,
+            "name": "the fez club",
+            "area": "center",
+            "pricerange": "moderate"
+          },
+          {
+            "doc_id": "attraction#64",
+            "domain": "attraction",
+            "score": 3.183687,
+            "name": "soul tree nightclub",
+            "area": "center",
+            "pricerange": "cheap"
+          },
+          {
+            "doc_id": "attraction#36",
+            "domain": "attraction",
+            "score": 3.183687,
+            "name": "kambar",
+            "area": "center",
+            "pricerange": "moderate"
+          },
+          {
+            "doc_id": "attraction#24",
+            "domain": "attraction",
+            "score": 3.183687,
+            "name": "club salsa",
+            "area": "center",
+            "pricerange": "moderate"
+          }
+        ]
       }
     ]
   },
@@ -74227,44 +74301,44 @@
         "domain": "attraction",
         "topk": [
           {
-            "doc_id": "attraction#77",
+            "doc_id": "attraction#69",
             "domain": "attraction",
-            "score": 9.270765,
-            "name": "whale of a time",
-            "area": "west",
-            "pricerange": null
+            "score": 10.548184,
+            "name": "the fez club",
+            "area": "center",
+            "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#65",
+            "doc_id": "attraction#64",
             "domain": "attraction",
-            "score": 9.270765,
-            "name": "tenpin",
-            "area": "south",
-            "pricerange": null
+            "score": 10.548184,
+            "name": "soul tree nightclub",
+            "area": "center",
+            "pricerange": "cheap"
           },
           {
-            "doc_id": "attraction#47",
+            "doc_id": "attraction#36",
             "domain": "attraction",
-            "score": 9.270765,
-            "name": "nusha",
-            "area": "south",
-            "pricerange": null
+            "score": 10.548184,
+            "name": "kambar",
+            "area": "center",
+            "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#28",
+            "doc_id": "attraction#24",
             "domain": "attraction",
-            "score": 9.270765,
-            "name": "funky fun house",
-            "area": "east",
-            "pricerange": null
+            "score": 10.548184,
+            "name": "club salsa",
+            "area": "center",
+            "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#17",
+            "doc_id": "attraction#4",
             "domain": "attraction",
-            "score": 9.270765,
-            "name": "cherry hinton hall and grounds",
-            "area": "east",
-            "pricerange": null
+            "score": 10.548184,
+            "name": "ballare",
+            "area": "center",
+            "pricerange": "moderate"
           }
         ]
       }
@@ -74821,17 +74895,9 @@
         "domain": "attraction",
         "topk": [
           {
-            "doc_id": "attraction#14",
-            "domain": "attraction",
-            "score": 10.974835,
-            "name": "cambridge museum of technology",
-            "area": "east",
-            "pricerange": "expensive"
-          },
-          {
             "doc_id": "attraction#69",
             "domain": "attraction",
-            "score": 10.087229,
+            "score": 13.270917,
             "name": "the fez club",
             "area": "center",
             "pricerange": "moderate"
@@ -74839,7 +74905,7 @@
           {
             "doc_id": "attraction#36",
             "domain": "attraction",
-            "score": 10.087229,
+            "score": 13.270917,
             "name": "kambar",
             "area": "center",
             "pricerange": "moderate"
@@ -74847,7 +74913,7 @@
           {
             "doc_id": "attraction#24",
             "domain": "attraction",
-            "score": 10.087229,
+            "score": 13.270917,
             "name": "club salsa",
             "area": "center",
             "pricerange": "moderate"
@@ -74855,10 +74921,18 @@
           {
             "doc_id": "attraction#4",
             "domain": "attraction",
-            "score": 10.087229,
+            "score": 13.270917,
             "name": "ballare",
             "area": "center",
             "pricerange": "moderate"
+          },
+          {
+            "doc_id": "attraction#14",
+            "domain": "attraction",
+            "score": 10.974835,
+            "name": "cambridge museum of technology",
+            "area": "east",
+            "pricerange": "expensive"
           }
         ]
       }
@@ -75633,7 +75707,7 @@
           {
             "doc_id": "attraction#64",
             "domain": "attraction",
-            "score": 8.027386,
+            "score": 11.211073,
             "name": "soul tree nightclub",
             "area": "center",
             "pricerange": "cheap"
@@ -75641,34 +75715,34 @@
           {
             "doc_id": "attraction#73",
             "domain": "attraction",
-            "score": 4.677195,
+            "score": 8.593886,
             "name": "the place",
             "area": "south",
             "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#51",
+            "doc_id": "attraction#69",
             "domain": "attraction",
-            "score": 4.623316,
-            "name": "people's portraits exhibition at girton college",
-            "area": "west",
-            "pricerange": "free"
+            "score": 7.554916,
+            "name": "the fez club",
+            "area": "center",
+            "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#46",
+            "doc_id": "attraction#36",
             "domain": "attraction",
-            "score": 4.623316,
-            "name": "museum of classical archaeology",
-            "area": "west",
-            "pricerange": "free"
+            "score": 7.554916,
+            "name": "kambar",
+            "area": "center",
+            "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#41",
+            "doc_id": "attraction#24",
             "domain": "attraction",
-            "score": 4.623316,
-            "name": "lynne strover gallery",
-            "area": "west",
-            "pricerange": "free"
+            "score": 7.554916,
+            "name": "club salsa",
+            "area": "center",
+            "pricerange": "moderate"
           }
         ]
       }
@@ -78163,7 +78237,7 @@
           {
             "doc_id": "attraction#67",
             "domain": "attraction",
-            "score": 4.88943,
+            "score": 14.662668,
             "name": "the cambridge punter",
             "area": "center",
             "pricerange": null
@@ -78171,7 +78245,7 @@
           {
             "doc_id": "attraction#61",
             "domain": "attraction",
-            "score": 4.88943,
+            "score": 14.662668,
             "name": "scudamores punting co",
             "area": "center",
             "pricerange": null
@@ -78179,7 +78253,7 @@
           {
             "doc_id": "attraction#55",
             "domain": "attraction",
-            "score": 4.88943,
+            "score": 14.662668,
             "name": "riverboat georgina",
             "area": "north",
             "pricerange": null
@@ -78187,7 +78261,7 @@
           {
             "doc_id": "attraction#8",
             "domain": "attraction",
-            "score": 4.88943,
+            "score": 14.662668,
             "name": "camboats",
             "area": "east",
             "pricerange": null
@@ -78917,44 +78991,44 @@
         "domain": "attraction",
         "topk": [
           {
-            "doc_id": "attraction#75",
+            "doc_id": "attraction#73",
             "domain": "attraction",
-            "score": 0.791579,
-            "name": "vue cinema",
-            "area": "center",
-            "pricerange": null
+            "score": 3.916691,
+            "name": "the place",
+            "area": "south",
+            "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#72",
+            "doc_id": "attraction#69",
             "domain": "attraction",
-            "score": 0.791579,
-            "name": "the man on the moon",
+            "score": 3.753052,
+            "name": "the fez club",
             "area": "center",
-            "pricerange": null
+            "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#67",
+            "doc_id": "attraction#64",
             "domain": "attraction",
-            "score": 0.791579,
-            "name": "the cambridge punter",
+            "score": 3.753052,
+            "name": "soul tree nightclub",
             "area": "center",
-            "pricerange": null
+            "pricerange": "cheap"
           },
           {
-            "doc_id": "attraction#66",
+            "doc_id": "attraction#36",
             "domain": "attraction",
-            "score": 0.791579,
-            "name": "the cambridge corn exchange",
+            "score": 3.753052,
+            "name": "kambar",
             "area": "center",
-            "pricerange": null
+            "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#61",
+            "doc_id": "attraction#24",
             "domain": "attraction",
-            "score": 0.791579,
-            "name": "scudamores punting co",
+            "score": 3.753052,
+            "name": "club salsa",
             "area": "center",
-            "pricerange": null
+            "pricerange": "moderate"
           }
         ]
       }
@@ -78973,7 +79047,7 @@
           {
             "doc_id": "attraction#69",
             "domain": "attraction",
-            "score": 4.474874,
+            "score": 10.842248,
             "name": "the fez club",
             "area": "center",
             "pricerange": "moderate"
@@ -78981,7 +79055,7 @@
           {
             "doc_id": "attraction#36",
             "domain": "attraction",
-            "score": 4.474874,
+            "score": 10.842248,
             "name": "kambar",
             "area": "center",
             "pricerange": "moderate"
@@ -78989,7 +79063,7 @@
           {
             "doc_id": "attraction#24",
             "domain": "attraction",
-            "score": 4.474874,
+            "score": 10.842248,
             "name": "club salsa",
             "area": "center",
             "pricerange": "moderate"
@@ -78997,18 +79071,18 @@
           {
             "doc_id": "attraction#4",
             "domain": "attraction",
-            "score": 4.474874,
+            "score": 10.842248,
             "name": "ballare",
             "area": "center",
             "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#14",
+            "doc_id": "attraction#73",
             "domain": "attraction",
-            "score": 3.336145,
-            "name": "cambridge museum of technology",
-            "area": "east",
-            "pricerange": "expensive"
+            "score": 7.835868,
+            "name": "the place",
+            "area": "south",
+            "pricerange": "moderate"
           }
         ]
       }
@@ -90743,7 +90817,7 @@
           {
             "doc_id": "attraction#69",
             "domain": "attraction",
-            "score": 15.936096,
+            "score": 22.30347,
             "name": "the fez club",
             "area": "center",
             "pricerange": "moderate"
@@ -90751,7 +90825,7 @@
           {
             "doc_id": "attraction#36",
             "domain": "attraction",
-            "score": 15.936096,
+            "score": 22.30347,
             "name": "kambar",
             "area": "center",
             "pricerange": "moderate"
@@ -90759,7 +90833,7 @@
           {
             "doc_id": "attraction#24",
             "domain": "attraction",
-            "score": 15.936096,
+            "score": 22.30347,
             "name": "club salsa",
             "area": "center",
             "pricerange": "moderate"
@@ -90767,16 +90841,16 @@
           {
             "doc_id": "attraction#4",
             "domain": "attraction",
-            "score": 15.936096,
+            "score": 22.30347,
             "name": "ballare",
             "area": "center",
             "pricerange": "moderate"
           },
           {
-            "doc_id": "attraction#74",
+            "doc_id": "attraction#64",
             "domain": "attraction",
-            "score": 15.092481,
-            "name": "trinity college",
+            "score": 17.661558,
+            "name": "soul tree nightclub",
             "area": "center",
             "pricerange": "cheap"
           }

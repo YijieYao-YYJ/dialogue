@@ -3,8 +3,8 @@ from pathlib import Path
 from typing import Any, Set
 
 
-QUERIES_PATH      = Path("queries_dev.json")
-RESULTS_PATH = Path("bm25_results.json")
+QUERIES_PATH = Path("queries_dev.json")
+RESULTS_PATH = Path("doc2vec_results.json")
 
 # 参与评测的域
 ALLOWED_DOMAINS: Set[str] = {"restaurant", "hotel", "attraction"}
@@ -81,7 +81,7 @@ def evaluate():
     # print(queries[:10])
     pred_index = load_bm25(RESULTS_PATH)
     db = get_database()
-
+    # nongold_number = 0
     overall = {K: {"tp":0, "p":0, "g":0, "samples":0} for K in K_LIST}
     bydom   = {d: {K: {"tp":0, "p":0, "g":0, "samples":0} for K in K_LIST} for d in ALLOWED_DOMAINS}
 
@@ -100,6 +100,7 @@ def evaluate():
             gold_names = { (r.get("name") or "").strip().lower() for r in gold if isinstance(r.get("name"), str) }
             gold_names.discard("")
             if not gold_names:
+                # nongold_number = nongold_number +1
                 continue
 
             # 预测
@@ -123,6 +124,7 @@ def evaluate():
                 bydom[dom][K]["samples"] += 1
 
     # 输出
+    # print(nongold_number)
     print("===== Overall =====")
     for K in K_LIST:
         o = overall[K]
