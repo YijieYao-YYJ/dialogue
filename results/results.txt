@@ -1,0 +1,95 @@
+bm25
+
+===== Overall =====
+@1  Samples=  1606  TP/Pred/Gold=1157/1606/16589  P=0.7204  R=0.0697  F1=0.1272  MRR=0.7204
+@3  Samples=  1606  TP/Pred/Gold=3131/4818/16589  P=0.6499  R=0.1887  F1=0.2925  MRR=0.7659
+@5  Samples=  1606  TP/Pred/Gold=4691/8030/16589  P=0.5842  R=0.2828  F1=0.3811  MRR=0.7763
+
+===== By Domain =====
+[attraction] @1  Samples=   479  TP/Pred/Gold=334/479/7111  P=0.6973  R=0.0470  F1=0.0880  MRR=0.6973
+[attraction] @3  Samples=   479  TP/Pred/Gold=982/1437/7111  P=0.6834  R=0.1381  F1=0.2298  MRR=0.7376
+[attraction] @5  Samples=   479  TP/Pred/Gold=1560/2395/7111  P=0.6514  R=0.2194  F1=0.3282  MRR=0.7443
+[hotel     ] @1  Samples=   595  TP/Pred/Gold=376/595/4408  P=0.6319  R=0.0853  F1=0.1503  MRR=0.6319
+[hotel     ] @3  Samples=   595  TP/Pred/Gold=1015/1785/4408  P=0.5686  R=0.2303  F1=0.3278  MRR=0.6980
+[hotel     ] @5  Samples=   595  TP/Pred/Gold=1522/2975/4408  P=0.5116  R=0.3453  F1=0.4123  MRR=0.7174
+[restaurant] @1  Samples=   532  TP/Pred/Gold=447/532/5070  P=0.8402  R=0.0882  F1=0.1596  MRR=0.8402
+[restaurant] @3  Samples=   532  TP/Pred/Gold=1134/1596/5070  P=0.7105  R=0.2237  F1=0.3402  MRR=0.8672
+[restaurant] @5  Samples=   532  TP/Pred/Gold=1609/2660/5070  P=0.6049  R=0.3174  F1=0.4163  MRR=0.8711
+
+bm25 with dialogue state
+
+===== Overall =====
+@1  Samples=  1606  TP/Pred/Gold=1370/1606/16589  P=0.8531  R=0.0826  F1=0.1506  MRR=0.8531
+@3  Samples=  1606  TP/Pred/Gold=3640/4818/16589  P=0.7555  R=0.2194  F1=0.3401  MRR=0.8834
+@5  Samples=  1606  TP/Pred/Gold=5464/8030/16589  P=0.6804  R=0.3294  F1=0.4439  MRR=0.8926
+
+===== By Domain =====
+[attraction] @1  Samples=   479  TP/Pred/Gold=478/479/7111  P=0.9979  R=0.0672  F1=0.1260  MRR=0.9979
+[attraction] @3  Samples=   479  TP/Pred/Gold=1350/1437/7111  P=0.9395  R=0.1898  F1=0.3159  MRR=0.9979
+[attraction] @5  Samples=   479  TP/Pred/Gold=2153/2395/7111  P=0.8990  R=0.3028  F1=0.4530  MRR=0.9984
+[hotel     ] @1  Samples=   595  TP/Pred/Gold=360/595/4408  P=0.6050  R=0.0817  F1=0.1439  MRR=0.6050
+[hotel     ] @3  Samples=   595  TP/Pred/Gold=950/1785/4408  P=0.5322  R=0.2155  F1=0.3068  MRR=0.6868
+[hotel     ] @5  Samples=   595  TP/Pred/Gold=1427/2975/4408  P=0.4797  R=0.3237  F1=0.3866  MRR=0.7113
+[restaurant] @1  Samples=   532  TP/Pred/Gold=532/532/5070  P=1.0000  R=0.1049  F1=0.1899  MRR=1.0000
+[restaurant] @3  Samples=   532  TP/Pred/Gold=1340/1596/5070  P=0.8396  R=0.2643  F1=0.4020  MRR=1.0000
+[restaurant] @5  Samples=   532  TP/Pred/Gold=1884/2660/5070  P=0.7083  R=0.3716  F1=0.4875  MRR=1.0000
+
+
+
+
+
+doc2vec
+
+===== Overall =====
+@1  Samples=  1606  TP/Pred/Gold=1176/1606/16589  P=0.7323  R=0.0709  F1=0.1293  MRR=0.7323
+@3  Samples=  1606  TP/Pred/Gold=3176/4818/16589  P=0.6592  R=0.1915  F1=0.2967  MRR=0.7914
+@5  Samples=  1606  TP/Pred/Gold=4702/8030/16589  P=0.5856  R=0.2834  F1=0.3820  MRR=0.8020
+
+===== By Domain =====
+[attraction] @1  Samples=   479  TP/Pred/Gold=280/479/7111  P=0.5846  R=0.0394  F1=0.0738  MRR=0.5846
+[attraction] @3  Samples=   479  TP/Pred/Gold=812/1437/7111  P=0.5651  R=0.1142  F1=0.1900  MRR=0.6420
+[attraction] @5  Samples=   479  TP/Pred/Gold=1298/2395/7111  P=0.5420  R=0.1825  F1=0.2731  MRR=0.6599
+[hotel     ] @1  Samples=   595  TP/Pred/Gold=458/595/4408  P=0.7697  R=0.1039  F1=0.1831  MRR=0.7697
+[hotel     ] @3  Samples=   595  TP/Pred/Gold=1227/1785/4408  P=0.6874  R=0.2784  F1=0.3963  MRR=0.8398
+[hotel     ] @5  Samples=   595  TP/Pred/Gold=1781/2975/4408  P=0.5987  R=0.4040  F1=0.4825  MRR=0.8463
+[restaurant] @1  Samples=   532  TP/Pred/Gold=438/532/5070  P=0.8233  R=0.0864  F1=0.1564  MRR=0.8233
+[restaurant] @3  Samples=   532  TP/Pred/Gold=1137/1596/5070  P=0.7124  R=0.2243  F1=0.3411  MRR=0.8719
+[restaurant] @5  Samples=   532  TP/Pred/Gold=1623/2660/5070  P=0.6102  R=0.3201  F1=0.4199  MRR=0.8802
+
+
+doc2vec with dialogue state
+
+===== Overall =====
+@1  Samples=  1606  TP/Pred/Gold=1381/1606/16589  P=0.8599  R=0.0832  F1=0.1518  MRR=0.8599
+@3  Samples=  1606  TP/Pred/Gold=3791/4818/16589  P=0.7868  R=0.2285  F1=0.3542  MRR=0.9148
+@5  Samples=  1606  TP/Pred/Gold=5654/8030/16589  P=0.7041  R=0.3408  F1=0.4593  MRR=0.9195
+
+===== By Domain =====
+[attraction] @1  Samples=   479  TP/Pred/Gold=288/479/7111  P=0.6013  R=0.0405  F1=0.0759  MRR=0.6013
+[attraction] @3  Samples=   479  TP/Pred/Gold=1014/1437/7111  P=0.7056  R=0.1426  F1=0.2372  MRR=0.7613
+[attraction] @5  Samples=   479  TP/Pred/Gold=1693/2395/7111  P=0.7069  R=0.2381  F1=0.3562  MRR=0.7743
+[hotel     ] @1  Samples=   595  TP/Pred/Gold=562/595/4408  P=0.9445  R=0.1275  F1=0.2247  MRR=0.9445
+[hotel     ] @3  Samples=   595  TP/Pred/Gold=1438/1785/4408  P=0.8056  R=0.3262  F1=0.4644  MRR=0.9630
+[hotel     ] @5  Samples=   595  TP/Pred/Gold=2076/2975/4408  P=0.6978  R=0.4710  F1=0.5624  MRR=0.9653
+[restaurant] @1  Samples=   532  TP/Pred/Gold=531/532/5070  P=0.9981  R=0.1047  F1=0.1896  MRR=0.9981
+[restaurant] @3  Samples=   532  TP/Pred/Gold=1339/1596/5070  P=0.8390  R=0.2641  F1=0.4017  MRR=0.9991
+[restaurant] @5  Samples=   532  TP/Pred/Gold=1885/2660/5070  P=0.7086  R=0.3718  F1=0.4877  MRR=0.9991
+
+
+rnn_gru
+
+===== Overall =====
+@1  Samples=  1606  TP/Pred/Gold=1460/1606/16589  P=0.9091  R=0.0880  F1=0.1605  MRR=0.9091
+@3  Samples=  1606  TP/Pred/Gold=3892/4818/16589  P=0.8078  R=0.2346  F1=0.3636  MRR=0.9285
+@5  Samples=  1606  TP/Pred/Gold=5832/8030/16589  P=0.7263  R=0.3516  F1=0.4738  MRR=0.9326
+
+===== By Domain =====
+[attraction] @1  Samples=   479  TP/Pred/Gold=444/479/7111  P=0.9269  R=0.0624  F1=0.1170  MRR=0.9269
+[attraction] @3  Samples=   479  TP/Pred/Gold=1260/1437/7111  P=0.8768  R=0.1772  F1=0.2948  MRR=0.9360
+[attraction] @5  Samples=   479  TP/Pred/Gold=2027/2395/7111  P=0.8463  R=0.2851  F1=0.4265  MRR=0.9397
+[hotel     ] @1  Samples=   595  TP/Pred/Gold=517/595/4408  P=0.8689  R=0.1173  F1=0.2067  MRR=0.8689
+[hotel     ] @3  Samples=   595  TP/Pred/Gold=1355/1785/4408  P=0.7591  R=0.3074  F1=0.4376  MRR=0.9042
+[hotel     ] @5  Samples=   595  TP/Pred/Gold=1979/2975/4408  P=0.6652  R=0.4490  F1=0.5361  MRR=0.9094
+[restaurant] @1  Samples=   532  TP/Pred/Gold=499/532/5070  P=0.9380  R=0.0984  F1=0.1782  MRR=0.9380
+[restaurant] @3  Samples=   532  TP/Pred/Gold=1277/1596/5070  P=0.8001  R=0.2519  F1=0.3831  MRR=0.9489
+[restaurant] @5  Samples=   532  TP/Pred/Gold=1826/2660/5070  P=0.6865  R=0.3602  F1=0.4724  MRR=0.9521

@@ -100,7 +100,6 @@ def evaluate():
     pred_index = load_bm25(RESULTS_PATH)
     db = get_database()
 
-    # 用于 PRF 的累积
     overall = {K: {"tp": 0, "p": 0, "g": 0, "samples": 0} for K in K_LIST}
     bydom   = {
         d: {K: {"tp": 0, "p": 0, "g": 0, "samples": 0} for K in K_LIST}
@@ -124,7 +123,6 @@ def evaluate():
             if not kv:
                 continue
 
-            # golden answer：用 dbquery 根据 (domain, constraints) 查数据库
             gold = db.query(dom, kv)
             gold_names = {
                 (r.get("name") or "").strip().lower()
@@ -133,15 +131,11 @@ def evaluate():
             }
             gold_names.discard("")
             if not gold_names:
-                # 该约束下数据库没有任何实体，跳过此样本
                 continue
 
-            # 预测序列：doc2vec / bm25 的检索结果（有顺序）
             pred_names = pred_index.get((did, turn, dom), [])
 
-            # 对每一个 K 既算 PRF 也算 RR@K
             for K in K_LIST:
-                # --------- PRF 部分（和你原来一样） ---------
                 preds_set = set(pred_names[:K])
                 tp = len(preds_set & gold_names)
                 p  = len(preds_set)
@@ -157,12 +151,10 @@ def evaluate():
                 bydom[dom][K]["g"]  += g
                 bydom[dom][K]["samples"] += 1
 
-                # --------- MRR 部分：累积 RR@K ---------
                 rr = reciprocal_rank_at_k(pred_names, gold_names, K)
                 overall_rr_sum[K] += rr
                 bydom_rr_sum[dom][K] += rr
 
-    # 输出 Overall
     print("===== Overall =====")
     for K in K_LIST:
         o = overall[K]
@@ -173,7 +165,6 @@ def evaluate():
             f"P={P:.4f}  R={R:.4f}  F1={F1:.4f}  MRR={mrr:.4f}"
         )
 
-    # 输出分域结果
     print("\n===== By Domain =====")
     for dom in sorted(ALLOWED_DOMAINS):
         for K in K_LIST:

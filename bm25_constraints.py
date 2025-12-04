@@ -88,7 +88,6 @@ def constraints_to_text(q: Dict[str, Any]) -> str:
 # -------------------- Load entities --------------------
 def load_entities(path: Path):
     data = json.loads(path.read_text(encoding="utf-8"))
-    # entities.json 的结构和原 bm25 一样：只保留 ALLOWED_DOMAINS
     return [e for e in data if (e.get("domain") in ALLOWED_DOMAINS)]
 
 
@@ -202,7 +201,7 @@ def main():
     for q in queries:
         cons_list = q.get("constraints") or []
         if not cons_list:
-            continue  # 此 USER 轮不检索
+            continue
 
         # 域来源：constraints 中的 domain
         domains = [c.get("domain") for c in cons_list if isinstance(c, dict)]
@@ -211,7 +210,7 @@ def main():
         if not domains:
             continue
 
-        # query 文本来自 dialogue state，而不是自然语言句子
+        # query 文本来自 dialogue state
         q_text = constraints_to_text(q)
         if not q_text.strip():
             continue

@@ -275,7 +275,7 @@ def search_and_write(model: Doc2Vec, entities, queries):
             order  = cosine_topk(q_vec, mat, TOPK)
 
             packed = pack_top_items(doc_ids, attrs, order, scores)
-            # 填回 domain 字段
+
             for it in packed:
                 it["domain"] = dom
 
