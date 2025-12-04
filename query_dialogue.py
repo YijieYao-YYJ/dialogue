@@ -208,13 +208,13 @@ def main():
         try:
             data = json.loads(fp.read_text(encoding="utf-8"))
         except Exception as e:
-            print(f"⚠️ 跳过无法读取的文件 {fp.name}: {e}")
+            print(f"跳过无法读取的文件 {fp.name}: {e}")
             continue
         if isinstance(data, dict):
             for k, v in data.items():
                 obj[str(k)] = v
         else:
-            print(f"⚠️ 跳过（顶层不是 dict）: {fp.name}")
+            print(f"跳过（顶层不是 dict）: {fp.name}")
 
 
     print(f"📦 已读取 {len(files)} 个 JSON 文件，合并得到 {len(obj)} 个对话。")
@@ -227,7 +227,7 @@ def main():
 
     # 3) 写出
     OUTPUT_PATH.write_text(json.dumps(out_items, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"✅ 已生成 {len(out_items)} 条查询 -> {OUTPUT_PATH}")
+    print(f"已生成 {len(out_items)} 条查询 -> {OUTPUT_PATH}")
 
 # def main():
 #     data = json.loads(INPUT_PATH.read_text(encoding="utf-8"))
@@ -239,7 +239,7 @@ def main():
 #     # out_items = [x for x in out_items if x["constraints"]]
 #
 #     OUTPUT_PATH.write_text(json.dumps(out_items, ensure_ascii=False, indent=2), encoding="utf-8")
-#     print(f"✅ 已生成 {len(out_items)} 条查询 -> {OUTPUT_PATH}")
+#     print(f"已生成 {len(out_items)} 条查询 -> {OUTPUT_PATH}")
 
 
 if __name__ == "__main__":

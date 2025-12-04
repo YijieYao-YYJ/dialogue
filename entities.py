@@ -131,7 +131,7 @@ def main():
 
         f.write("\n]\n")
 
-    print(f"✅ 写出实体语料 -> {OUT}，共 {count} 条；已简化字段并保留 signature。")
+    print(f"写出实体语料 -> {OUT}，共 {count} 条；已简化字段并保留 signature。")
 
 
 if __name__ == "__main__":

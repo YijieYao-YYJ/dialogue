@@ -105,5 +105,5 @@ if __name__ == '__main__':
 
     out_path = Path("dbquery.json")
     out_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"✅ 已写入 {out_path.resolve()}")
-    print(f"✅ 符合要求的实体个数为 {len(res)}")
+    print(f"已写入 {out_path.resolve()}")
+    print(f"符合要求的实体个数为 {len(res)}")

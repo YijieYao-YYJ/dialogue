@@ -187,7 +187,7 @@ def main():
         })
 
     OUT_PATH.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"✅ 完成检索，写出 {len(results)} 条结果 -> {OUT_PATH}")
+    print(f"完成检索，写出 {len(results)} 条结果 -> {OUT_PATH}")
 
 
 if __name__ == "__main__":

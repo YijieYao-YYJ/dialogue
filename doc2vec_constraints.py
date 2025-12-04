@@ -295,7 +295,7 @@ def search_and_write(model: Doc2Vec, entities, queries):
         json.dumps(results, ensure_ascii=False, indent=2),
         encoding="utf-8"
     )
-    print(f"✅ Doc2Vec(PV-DBOW, constraints) 完成检索，写出 {len(results)} 条结果 -> {OUT_PATH}")
+    print(f"Doc2Vec(PV-DBOW, constraints) 完成检索，写出 {len(results)} 条结果 -> {OUT_PATH}")
 
 
 def main():
