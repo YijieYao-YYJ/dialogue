@@ -21,8 +21,8 @@ from typing import Dict, List, Tuple, Optional, Set, Any
 
 
 INPUT_PATH  = Path("MultiWOZ_2.1/train/dialogues_001.json")
-INPUT_DIR  = Path("MultiWOZ_2.1/train")
-OUTPUT_PATH = Path("queries.json")
+INPUT_DIR  = Path("MultiWOZ_2.1/dev")
+OUTPUT_PATH = Path("results/quiries/queries_dev.json")
 
 
 ALLOWED_DOMAINS: Set[str] = {"restaurant", "hotel", "attraction"}
@@ -114,8 +114,8 @@ def _build_constraints_from_next_system(next_system_turn: Optional[Dict], domain
         if _is_empty_like(v):
             continue
         s = str(v).strip()
-        if k == "area" and s.lower() == "center":
-            s = "centre"
+        # if k == "area" and s.lower() == "center":
+        #     s = "centre"
         kv.append((k, s))
     return kv
 

@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Any, Set
 
 QUERIES_PATH      = Path("queries_dev.json")
-BM25_RESULTS_PATH = Path("bm25_results.json")
+BM25_RESULTS_PATH = Path("results/bm25/bm25_results.json")
 
 ALLOWED_DOMAINS: Set[str] = {"restaurant", "hotel", "attraction"}
 EMPTY_TOKENS = {"", "not mentioned", "dontcare", "do n't care", "dont care", "none", "don't care"}

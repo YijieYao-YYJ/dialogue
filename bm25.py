@@ -5,9 +5,9 @@ from pathlib import Path
 from collections import Counter
 
 
-QUERIES_PATH  = Path("queries_dev.json")
-ENTITIES_PATH = Path("entities.json")
-OUT_PATH      = Path("bm25_results.json")
+QUERIES_PATH  = Path("results/quiries/queries_dev.json")
+ENTITIES_PATH = Path("results/entities/entities.json")
+OUT_PATH      = Path("results/bm25/bm25_results.json")
 
 ALLOWED_DOMAINS = {"restaurant", "hotel", "attraction"}
 TOPK = 5
@@ -22,22 +22,22 @@ def tokenize(text: str):
         return []
     text = text.lower()
     # 统一
-    text = text.replace("centre", "center")
-    text = text.replace("moderately", "moderate")
-    text = text.replace("night club", "nightclub")
-    text = text.replace("swimming pool", "swimmingpool")
-    text = text.replace("concert hall", "concerthall")
-    text = text.replace("museums", "museum")
-    text = text.replace("colleges", "college")
-    text = text.replace("hotels", "hotel")
-    text = text.replace("guest house", "guesthouse")
-    text = text.replace("guest houses", "guesthouse")
-    text = text.replace("mid price", "moderate")
-    text = text.replace("downtown", "center")
-    text = text.replace("inexpensive", "cheap")
-    text = text.replace("cheaply", "cheap")
-    text = text.replace("nightclubs", "nightclub")
-    text = text.replace("boating", "boat")
+    # text = text.replace("centre", "center")
+    # text = text.replace("moderately", "moderate")
+    # text = text.replace("night club", "nightclub")
+    # text = text.replace("swimming pool", "swimmingpool")
+    # text = text.replace("concert hall", "concerthall")
+    # text = text.replace("museums", "museum")
+    # text = text.replace("colleges", "college")
+    # text = text.replace("hotels", "hotel")
+    # text = text.replace("guest house", "guesthouse")
+    # text = text.replace("guest houses", "guesthouse")
+    # text = text.replace("mid price", "moderate")
+    # text = text.replace("downtown", "center")
+    # text = text.replace("inexpensive", "cheap")
+    # text = text.replace("cheaply", "cheap")
+    # text = text.replace("nightclubs", "nightclub")
+    # text = text.replace("boating", "boat")
 
 
     return _token_re.findall(text)
@@ -92,8 +92,9 @@ class BM25Index:
             if allowed_domains is not None and doc.get("domain") not in allowed_domains:
                 continue
             s = self.score(q_tokens, i)
-            if s > 0:
-                scores.append((s, i))
+            # if s > 0:
+            #     scores.append((s, i))
+            scores.append((s, i))
         scores.sort(reverse=True)
         return scores[:topk]
 

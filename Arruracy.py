@@ -3,8 +3,8 @@ from pathlib import Path
 from typing import Any, Set
 
 
-QUERIES_PATH = Path("queries_dev.json")
-RESULTS_PATH = Path("doc2vec_results.json")
+QUERIES_PATH = Path("results/quiries/queries_dev.json")
+RESULTS_PATH = Path("results/doc2vec/doc2vec_results.json")
 
 # 参与评测的域
 ALLOWED_DOMAINS: Set[str] = {"restaurant", "hotel", "attraction"}
@@ -42,7 +42,7 @@ def load_queries(path: Path):
     return out
 
 
-def load_bm25(path: Path):
+def load_results(path: Path):
     data = json.loads(path.read_text(encoding="utf-8"))
     pred = {}
     for item in data:
@@ -79,7 +79,7 @@ def prf(tp: int, p: int, g: int):
 def evaluate():
     queries = load_queries(QUERIES_PATH)
     # print(queries[:10])
-    pred_index = load_bm25(RESULTS_PATH)
+    pred_index = load_results(RESULTS_PATH)
     db = get_database()
     # nongold_number = 0
     overall = {K: {"tp":0, "p":0, "g":0, "samples":0} for K in K_LIST}

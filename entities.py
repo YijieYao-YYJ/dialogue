@@ -3,7 +3,7 @@ from pathlib import Path
 
 # -------------------- Config --------------------
 DB_DIR = Path("db")
-OUT = Path("entities.json")
+OUT = Path("results/entities/entities.json")
 
 # 只保留三类
 ALLOWED_DOMAINS = {"restaurant", "hotel", "attraction"}
@@ -29,7 +29,8 @@ def normalize_val(v):
         return "no"
     if s in {"?", "n/a", "na", "none", "unknown", ""}:
         return None
-    return s.replace("centre", "center")
+    # return s.replace("centre", "center")
+    return s
 
 
 def normalize_key(k: str) -> str:

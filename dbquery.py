@@ -93,8 +93,8 @@ if __name__ == '__main__':
 
     db = Database()
 
-    domain = 'restaurant'
-    constraints = [('food', 'british'), ('area', 'centre'), ('pricerange', 'expensive')]
+    domain = 'hotel'
+    constraints = [('area', 'centre'), ('stars', '4')]
     res = db.query(domain, constraints)
 
     payload = {

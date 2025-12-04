@@ -11,10 +11,10 @@ import numpy as np
 from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 
 # -------------------- Config --------------------
-QUERIES_PATH   = Path("queries_dev.json")
-ENTITIES_PATH  = Path("entities.json")
+QUERIES_PATH   = Path("results/quiries/queries_dev.json")
+ENTITIES_PATH  = Path("results/entities/entities.json")
 MODEL_PATH     = Path("doc2vec_dbow.bin")
-OUT_PATH       = Path("doc2vec_results.json")
+OUT_PATH       = Path("results/doc2vec/doc2vec_results.json")
 
 ALLOWED_DOMAINS = {"restaurant", "hotel", "attraction"}
 TOPK = 5
@@ -35,22 +35,22 @@ def tokenize(text: str):
     if not text:
         return []
     text = text.lower()
-    text = text.replace("centre", "center")
-    text = text.replace("moderately", "moderate")
-    text = text.replace("night club", "nightclub")
-    text = text.replace("swimming pool", "swimmingpool")
-    text = text.replace("concert hall", "concerthall")
-    text = text.replace("museums", "museum")
-    text = text.replace("colleges", "college")
-    text = text.replace("hotels", "hotel")
-    text = text.replace("guest house", "guesthouse")
-    text = text.replace("guest houses", "guesthouse")
-    text = text.replace("mid price", "moderate")
-    text = text.replace("downtown", "center")
-    text = text.replace("inexpensive", "cheap")
-    text = text.replace("cheaply", "cheap")
-    text = text.replace("nightclubs", "nightclub")
-    text = text.replace("boating", "boat")
+    # text = text.replace("centre", "center")
+    # text = text.replace("moderately", "moderate")
+    # text = text.replace("night club", "nightclub")
+    # text = text.replace("swimming pool", "swimmingpool")
+    # text = text.replace("concert hall", "concerthall")
+    # text = text.replace("museums", "museum")
+    # text = text.replace("colleges", "college")
+    # text = text.replace("hotels", "hotel")
+    # text = text.replace("guest house", "guesthouse")
+    # text = text.replace("guest houses", "guesthouse")
+    # text = text.replace("mid price", "moderate")
+    # text = text.replace("downtown", "center")
+    # text = text.replace("inexpensive", "cheap")
+    # text = text.replace("cheaply", "cheap")
+    # text = text.replace("nightclubs", "nightclub")
+    # text = text.replace("boating", "boat")
     return _token_re.findall(text)
 
 # -------------------- IO --------------------
