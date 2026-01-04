@@ -21,8 +21,8 @@ from typing import Dict, List, Tuple, Optional, Set, Any
 
 
 INPUT_PATH  = Path("MultiWOZ_2.1/train/dialogues_001.json")
-INPUT_DIR  = Path("MultiWOZ_2.1/dev")
-OUTPUT_PATH = Path("results/quiries/queries_dev.json")
+INPUT_DIR  = Path("MultiWOZ_2.1/test")
+OUTPUT_PATH = Path("results/quiries/queries_test.json")
 
 
 ALLOWED_DOMAINS: Set[str] = {"restaurant", "hotel", "attraction"}
@@ -176,6 +176,7 @@ def parse_dialogues_with_next(obj: Dict[str, Dict], allowed_domains: Set[str]) -
             buffer_lines.append(to_tagged_line(speaker, text))
 
             if speaker == "USER":
+                # buffer_lines.append(to_tagged_line(speaker, text))
                 next_sys = logs[idx + 1] if idx + 1 < len(logs) else None
                 domains = collect_domains_user_turn_by_next(turn, next_sys, allowed_domains)
 

@@ -3,7 +3,7 @@
 
 """
 从 MultiWOZ 抽取好的 queries_train.json + entities.json + dbquery.Database
-构造 RNN 双塔训练用的样本对，并写出为普通 JSON 文件。
+构造 RNN 双塔训练用的样本对
 
 输出格式 (train_pairs.json):
 
@@ -33,7 +33,7 @@ from typing import Any, Dict, List, Tuple, Set
 
 QUERIES_PATH  = Path("results/quiries/queries_train.json")
 ENTITIES_PATH = Path("results/entities/entities.json")
-OUT_PATH      = Path("results/rnn/train_pairs.json")
+OUT_PATH      = Path("gru/dialogue_state/train_pairs.json")
 
 
 ALLOWED_DOMAINS: Set[str] = {"restaurant", "hotel", "attraction"}
@@ -75,6 +75,41 @@ def normalize_constraints(raw: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         out.append({"domain": dom, "kv": kv})
     return out
 
+def constraints_to_text(cons_list: List[Dict[str, Any]]) -> str:
+    """
+    把一个 USER 轮里的 dialogue state(constraints) 转成一段查询字符串，
+    比如: restaurant pricerange cheap area centre food chinese hotel stars 4 area north ...
+    """
+    parts: List[str] = []
+
+    for c in cons_list:
+        if not isinstance(c, dict):
+            continue
+        dom = (c.get("domain") or "").strip().lower()
+        if dom not in ALLOWED_DOMAINS:
+            continue
+
+        kv_list = c.get("kv") or []
+        clean_kv: List[Tuple[str, str]] = []
+        for k, v in kv_list:
+            if not is_filled(v):
+                continue
+            k_str = str(k).strip().lower()
+            v_str = str(v).strip().lower()
+            if not v_str:
+                continue
+            clean_kv.append((k_str, v_str))
+
+        if not clean_kv:
+            continue
+
+        parts.append(dom)
+        for k, v in clean_kv:
+            parts.append(k)
+            parts.append(v)
+
+    return " ".join(parts)
+
 
 def load_entities(path: Path) -> List[Dict[str, Any]]:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -113,7 +148,7 @@ def build_train_pairs() -> List[Dict[str, Any]]:
     entities = load_entities(ENTITIES_PATH)
     ent_index = build_entity_index(entities)
 
-    # 为负样本方便，预先按域收集所有 (name_lower, text)
+
     all_ents_by_dom: Dict[str, List[Tuple[str, str]]] = {d: [] for d in ALLOWED_DOMAINS}
     for dom in ALLOWED_DOMAINS:
         for name_lc, ent in ent_index[dom].items():
@@ -132,14 +167,19 @@ def build_train_pairs() -> List[Dict[str, Any]]:
     for it in raw_queries:
         total_queries += 1
 
-        q_text = (it.get("query_text") or "").strip()
-        if not q_text:
-            skipped_no_query_text += 1
-            continue
+        # q_text = (it.get("query_text") or "").strip()
+        # if not q_text:
+        #     skipped_no_query_text += 1
+        #     continue
 
         did = it.get("dialogue_id")
         turn = int(it.get("turn", 0))
         cons_norm = normalize_constraints(it.get("constraints") or [])
+        #dialogue state
+        q_text = constraints_to_text(cons_norm)
+        if not q_text.strip():
+            skipped_no_query_text += 1
+            continue
 
         if not cons_norm:
             skipped_no_constraints += 1

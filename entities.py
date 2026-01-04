@@ -19,7 +19,7 @@ DOMAIN_FIELDS = {
 
 
 def normalize_val(v):
-    """清理噪声"""
+
     if v is None:
         return None
     s = str(v).strip().lower()
@@ -45,14 +45,14 @@ def normalize_key(k: str) -> str:
 
 
 def flatten_attrs(domain: str, ent: dict) -> dict:
-    """扁平化实体字典并清洗字段"""
+
     attrs = {}
     for k, v in ent.items():
         nk = normalize_key(k)
         if nk == "location":
             continue
         if nk == "price" and isinstance(v, dict):
-            # 展开嵌套 price 字段
+
             for rk, rv in v.items():
                 attrs[f"price_{normalize_key(rk)}"] = normalize_val(rv)
         else:
@@ -66,7 +66,7 @@ def flatten_attrs(domain: str, ent: dict) -> dict:
 
 
 def serialize_text(domain: str, attrs: dict) -> str:
-    """生成简洁 text 字符串"""
+
     fields = DOMAIN_FIELDS.get(domain, [])
     parts = []
 
@@ -131,7 +131,7 @@ def main():
 
         f.write("\n]\n")
 
-    print(f"写出实体语料 -> {OUT}，共 {count} 条；已简化字段并保留 signature。")
+    print(f"写出实体语料 -> {OUT}，共 {count} 条。")
 
 
 if __name__ == "__main__":
